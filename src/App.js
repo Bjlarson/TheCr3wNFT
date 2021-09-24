@@ -20,6 +20,15 @@ constructor() {
 componentDidMount(){
   this.findjoke();
   this.connectToMetaMask();
+  this.checkConnectedToEth();
+}
+
+checkConnectedToEth(){
+  if(window.ethereum.isConnected()){
+    console.log("MetaMask is Connected")
+  }else{
+    console.log("not connected")
+  }
 }
 
 connectToMetaMask(){
