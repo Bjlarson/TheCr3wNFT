@@ -3,9 +3,13 @@ import { ethers } from "ethers";
 import ErrorMessage from "./components/ErrorMessage";
 import TxList from "./components/TxList";
 
+function MetamaskAccountButton  ()  {
+  window.ethereum.request({ method: 'eth_requestAccounts' })
+}
+
 const startPayment = async ({ setError, setTxs, ether, addr }) => {
   try {
-    if (!window.ethereum)
+    if (typeof window.ethereum == 'undefined')
       throw new Error("No crypto wallet found. Please install it.");
 
     await window.ethereum.send("eth_requestAccounts");
@@ -24,9 +28,10 @@ const startPayment = async ({ setError, setTxs, ether, addr }) => {
   }
 };
 
-const readContract = async ({Contract_Address}) => {
-  if (!window.ethereum)
-    throw new Error("No crypto wallet found. Please install it.");
+const InteractWithContract = async ({setError, setTxs, Contract_Address}) => {
+  try {
+    if (typeof window.ethereum == 'undefined')
+      throw new Error("No crypto wallet found. Please install it.");
   
   const ABI = [
     'function data() view returns(unit)',
@@ -38,8 +43,18 @@ const readContract = async ({Contract_Address}) => {
 
   const readOnlyContract = new ethers.Contract(Contract_Address,ABI,provider);
   const value = await readOnlyContract.data();
+  console.log(value);
 
-}
+  const contract = new ethers.Contract(Contract_Address, ABI, signer);
+  const txResponse = await contract.data(2);
+  const txReceipt = await txResponse.wait();
+  console.log(txResponse);
+  console.log(txReceipt)
+  setTxs([txReceipt]);
+  } catch (err) {
+    setError(err.message);
+  }
+};
 
 export default function App() {
   const [error, setError] = useState();
@@ -55,10 +70,16 @@ export default function App() {
       ether: data.get("ether"),
       addr: data.get("addr")
     });
+    await InteractWithContract({
+        setError,
+        setTxs,
+        Contract_Address: data.get("Contract")
+      });
   };
 
   return (
-    <form className="m-4" onSubmit={handleSubmit}>
+    <div>
+      <form className="m-4" onSubmit={handleSubmit}>
       <div className="credit-card w-full lg:w-1/2 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">
         <main className="mt-4 p-4">
           <h1 className="text-xl font-semibold text-gray-700 text-center">
@@ -80,6 +101,12 @@ export default function App() {
                 className="input input-bordered block w-full focus:ring focus:outline-none"
                 placeholder="Amount in ETH"
               />
+              <input
+                name="Contract"
+                type="text"
+                className="input input-bordered block w-full focus:ring focus:outline-none"
+                placeholder="Amount in ETH"
+              />
             </div>
           </div>
         </main>
@@ -94,6 +121,14 @@ export default function App() {
           <TxList txs={txs} />
         </footer>
       </div>
-    </form>
+      </form>
+      <button
+            className="btn btn-primary submit-button focus:ring focus:outline-none w-full"
+            onClick = {InteractWithContract}
+          >
+            Interact With Contract
+          </button>
+          <button class="enableEthereumButton" onClick = {MetamaskAccountButton}>Enable Ethereum</button>
+    </div>
   );
 }
