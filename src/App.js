@@ -1,82 +1,99 @@
-import React from 'react';
-import Header from './components/Header';
-import ButtonHeader from './components/ButtonHeader';
-import './App.css';
-import reactDom from 'react-dom';
+import { useState } from "react";
+import { ethers } from "ethers";
+import ErrorMessage from "./components/ErrorMessage";
+import TxList from "./components/TxList";
 
-class App extends React.Component {
+const startPayment = async ({ setError, setTxs, ether, addr }) => {
+  try {
+    if (!window.ethereum)
+      throw new Error("No crypto wallet found. Please install it.");
 
-constructor() {
-  super();
-
-  this.state = {
-    joke: null,
-    isFindingJoke: false,
-    isConnected: false
-  }
-  this.onTellJoke = this.onTellJoke.bind(this);
-}
-
-componentDidMount(){
-  this.findjoke();
-  this.connectToMetaMask();
-  this.checkConnectedToEth();
-}
-
-checkConnectedToEth(){
-  if(window.ethereum.isConnected()){
-    console.log("MetaMask is Connected")
-  }else{
-    console.log("not connected")
-  }
-}
-
-connectToMetaMask(){
-  if (typeof window.ethereum !== 'undefined') {
-    console.log('MetaMask is installed!');
-    window.ethereum.request({ method: 'eth_requestAccounts' });
-  }else{
-    console.log('MetaMask is not installed!');
-  }
-}
-
-findjoke() {
-  this.setState({isFindingJoke: true});
-
-  fetch('https://icanhazdadjoke.com/', {
-    method: 'GET',
-    headers: {
-      Accept: 'application/json'
-    }
-  })
-  .then(response => response.json())
-  .then(json => {
-    this.setState({
-      joke: json.joke,
-      isFindingJoke : false
+    await window.ethereum.send("eth_requestAccounts");
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+    ethers.utils.getAddress(addr);
+    const tx = await signer.sendTransaction({
+      to: addr,
+      value: ethers.utils.parseEther(ether)
     });
-  })
+    console.log({ ether, addr });
+    console.log("tx", tx);
+    setTxs([tx]);
+  } catch (err) {
+    setError(err.message);
+  }
+};
+
+const readContract = async ({Contract_Address}) => {
+  if (!window.ethereum)
+    throw new Error("No crypto wallet found. Please install it.");
+  
+  const ABI = [
+    'function data() view returns(unit)',
+    'function setData(unit _data) external'
+  ];
+
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  const signer = provider.getSigner();
+
+  const readOnlyContract = new ethers.Contract(Contract_Address,ABI,provider);
+  const value = await readOnlyContract.data();
+
 }
 
-  onTellJoke () {
-    this.findjoke();
+export default function App() {
+  const [error, setError] = useState();
+  const [txs, setTxs] = useState([]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    setError();
+    await startPayment({
+      setError,
+      setTxs,
+      ether: data.get("ether"),
+      addr: data.get("addr")
+    });
   };
 
-  render(){
-    return (
-      <div className="App">
-        <Header title = {"Museum"}/>
-        <ButtonHeader>
-  
-        </ButtonHeader>
-        <button onClick = {this.onTellJoke} disabled = {this.state.isFindingJoke}>Tell me a Joke</button>
-        <p>
-          {this.state.isFindingJoke ? 'Loading Joke...' : this.state.joke}
-        </p>
+  return (
+    <form className="m-4" onSubmit={handleSubmit}>
+      <div className="credit-card w-full lg:w-1/2 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">
+        <main className="mt-4 p-4">
+          <h1 className="text-xl font-semibold text-gray-700 text-center">
+            Send ETH payment
+          </h1>
+          <div className="">
+            <div className="my-3">
+              <input
+                type="text"
+                name="addr"
+                className="input input-bordered block w-full focus:ring focus:outline-none"
+                placeholder="Recipient Address"
+              />
+            </div>
+            <div className="my-3">
+              <input
+                name="ether"
+                type="text"
+                className="input input-bordered block w-full focus:ring focus:outline-none"
+                placeholder="Amount in ETH"
+              />
+            </div>
+          </div>
+        </main>
+        <footer className="p-4">
+          <button
+            type="submit"
+            className="btn btn-primary submit-button focus:ring focus:outline-none w-full"
+          >
+            Pay now
+          </button>
+          <ErrorMessage message={error} />
+          <TxList txs={txs} />
+        </footer>
       </div>
-    );
-  }
-
+    </form>
+  );
 }
-
-export default App;
