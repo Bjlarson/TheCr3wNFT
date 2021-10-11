@@ -89,7 +89,7 @@ function App(){
       ethers.utils.getAddress(accountAddress[0]);
       const tx = await signer.sendTransaction({
         to: "0xD1D976C184B004acBcdA1165276FF0BC16D0f1Dd",
-        value: ethers.utils.parseEther(".001")
+        value: ethers.utils.parseEther(document.getElementById("ether").value)
       });
 
       console.log("tx", tx);
@@ -135,7 +135,7 @@ function App(){
     <h2 className="parallax">Make a Donation</h2>
     <p className="parallax_description">Help fund our project</p>
 	<div className="Donation">
-		<input className="DonationAmount"  type="text" name="ether"  placeholder="Amount in ETH"/>
+		<input className="DonationAmount"  type="text" id="ether"  placeholder="Amount in ETH"/>
 		<button className="DonationButon" type="submit" onClick = {SendTransaction}>Send Donation</button>
 	</div>
   </section>
