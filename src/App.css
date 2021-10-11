@@ -184,7 +184,7 @@ ul li:hover a {
   margin-bottom: 5px;
   margin-top: 45px;
   margin-right: 15px;
-  color: #FFFFFF;
+  text-decoration-color: #FFFFFF;
 }
 ::placeholder {
   color: rgb(238, 238, 238);
@@ -198,6 +198,14 @@ ul li:hover a {
 ::-ms-input-placeholder { /* Microsoft Edge */
  color: rgb(238, 238, 238);
 
+}
+input, select, textarea{
+    color: #f8f8f8;
+}
+
+textarea:focus, input:focus {
+    color: #f8f8f8;
+	;
 }
 .DonationButon{
 	float: left;
