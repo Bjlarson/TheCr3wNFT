@@ -123,6 +123,7 @@ function App(){
       Check out these NFT's to add to your collection
     </p>
     <div className = "FeaturedImages">
+      <img src="https://purepng.com/public/uploads/large/purepng.com-donutdonutdoughnutsweetsnack-1411527416743kegtg.png" alt="" width="400" height="200" className="Images"/>
 		 <img src="https://purepng.com/public/uploads/large/purepng.com-donutdonutdoughnutsweetsnack-1411527416743kegtg.png" alt="" width="400" height="200" className="Images"/>
 		 <img src="https://pngimg.com/uploads/alien/alien_PNG81.png" alt="" width="400" height="200" className="Images"/>
 		 <img src="https://i.pinimg.com/originals/fd/94/e1/fd94e14c173efe3f18db004060474edd.png" alt="" width="400" height="200" className="Images"/>
