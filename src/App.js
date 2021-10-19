@@ -2,6 +2,10 @@ import { useState } from "react";
 import { ethers } from "ethers";
 import './App.css';
 import { Component } from "react";
+//import { Header, Footer, Donation} from "./components";
+//import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Donation from "./components/Donation";
 
 function MetamaskAccountButton  ()  {
   window.ethereum.request({ method: 'eth_requestAccounts' })
@@ -74,49 +78,11 @@ function App(){
   const GetMetamaskAccount = () => {
     console.log("accountAddress");
   }
-
-  const SendTransaction = async () => {
-    try {
-      if (typeof window.ethereum == 'undefined') 
-        throw new Error("No crypto wallet found. Please install it.");
-
-      const accountAddress = await window.ethereum.request({ method: 'eth_requestAccounts' }).then((res) => {return res;})
-      console.log(accountAddress)
-
-      await window.ethereum.send("eth_requestAccounts");
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      ethers.utils.getAddress(accountAddress[0]);
-      const tx = await signer.sendTransaction({
-        to: "0xD1D976C184B004acBcdA1165276FF0BC16D0f1Dd",
-        value: ethers.utils.parseEther(document.getElementById("ether").value)
-      });
-
-      console.log("tx", tx);
-    } catch (err) {
-      console.log(err.message);
-    }
-  }
-
-
   return (
     <div>
 
 <div className="container"> 
 
-  <header> <a href="">
-    <h4 className="logo">NFT MUSEUM</h4>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="#hero">HOME</a></li>
-		    <li><a href="#Museum">MUSEUM</a></li>
-        <li><a href="">MUSEUM</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li> <a href="#contact">CONTACT</a></li>
-      </ul>
-    </nav>
-  </header>
 
   <section className="Featured" id="Featured">
     <h2 className="hero_header">FEATURED <span className="light">NFT'S</span></h2>
@@ -133,24 +99,8 @@ function App(){
 		 <img src="https://pngimg.com/uploads/smoke/smoke_PNG55142.png" alt="" width="400" height="200" class="Images"/>
 	  </div>
   </section>
-  <section className="banner">
-    <h2 className="parallax">Make a Donation</h2>
-    <p className="parallax_description">Help fund our project</p>
-	<div className="Donation">
-		<input className="DonationAmount"  type="text" id="ether"  placeholder="Amount in ETH"/>
-		<button className="DonationButon" type="submit" onClick = {SendTransaction}>Send Donation</button>
-	</div>
-  </section>
-	
-  <section className="footer_banner" id="contact">
-	<div className="Subs">
-    	<p className="button">Insta</p>
-		<p className="button">FB</p>
-	    <p className="button">Email</p>
-	</div>
-    <h2 className="hidden">Footer Banner Section </h2>
-    <p className="hero_header">FOR THE LATEST NEWS &amp; UPDATES</p>
-	</section>
+  <Donation/>
+  <Footer/>
 	</div>
   </div>
   );
