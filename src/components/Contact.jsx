@@ -1,4 +1,4 @@
-import React, {usestate} from "react";
+import React from "react";
 import insta from "./Pictures/Instagram.png"
 import twitter from "./Pictures/twitter-logo.png"
 import spotify from "./Pictures/Spotify-Logo.png"
