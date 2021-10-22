@@ -429,9 +429,11 @@ footer {
 /* Museum */
 .Museum{
 	height: 800px;
+	text-align: center;
 }
 
 .viewPort{
+	border-radius: 25px;
 	width: 900px;
 	height: 500px;
 	margin-left: auto;
@@ -439,7 +441,30 @@ footer {
 	margin-top: 5%;
 	margin-bottom: 5%;
 	background-color: rgb(255, 255, 255);
-	box-shadow: 0 , 30, rgba(156, 156, 156, 0.719);
+	text-align: center;
+	box-shadow:
+  		1.3px 2.4px 8.8px rgba(0, 0, 0, 0.063),
+  		3px 5.5px 16.7px rgba(0, 0, 0, 0.072),
+  		5.5px 10.1px 25.3px rgba(0, 0, 0, 0.073),
+  		9.4px 17px 36.6px rgba(0, 0, 0, 0.074),
+  		16px 29.1px 54.1px rgba(0, 0, 0, 0.076),
+  		33px 60px 98px rgba(0, 0, 0, 0.09);
+}
+
+.view{
+	padding-top: 10%;
+	color:darkgray;
+	font-size: xx-large;
+}
+
+.MuseumHeader{
+	color: #414141;
+	font-size: xx-large;
+}
+
+.MuseumAbout{
+	color: #636363;
+	font-size: large;
 }
 
 /* Mobile */

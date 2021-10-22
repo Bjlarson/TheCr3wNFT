@@ -1,5 +1,4 @@
 import React from "react";
-import Doors from "./Pictures/R.jpg"
 import Donation from "./Donation";
 
 function Museum() {
@@ -7,9 +6,10 @@ function Museum() {
 	<div>
 		<section className="Museum">
             <div className = "viewPort">
-                <img ClassName="" alt="Twitter Logo" src={Doors} width="400" height="300"/>
+                <h2 className ="view">Comming Soon</h2>
             </div>
             <h2 className="MuseumHeader">Museum Comming Soon</h2>
+            <h2 className="MuseumAbout">A place to display your NFT collection and share with it with others.</h2>
   		</section>
 		<Donation/>
 	</div>
