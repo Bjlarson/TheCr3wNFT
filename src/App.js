@@ -7,6 +7,7 @@ import { Component } from "react";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
+import Museum from "./components/Museum";
 
 function MetamaskAccountButton  ()  {
   window.ethereum.request({ method: 'eth_requestAccounts' })
@@ -81,7 +82,7 @@ function App(){
   }
   return (
     <div className="container"> 
-      <Contact/>
+      <Museum/>
       <Footer/>
 	  </div>
   );
