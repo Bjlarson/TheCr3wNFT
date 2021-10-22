@@ -428,18 +428,18 @@ footer {
 
 /* Museum */
 .Museum{
-	height: 500px;
+	height: 800px;
 }
 
 .viewPort{
-	display: block;
 	width: 900px;
 	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5%;
-	margin-bottom: 2%;
-	background-color: chartreuse;
+	margin-bottom: 5%;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 , 30, rgba(156, 156, 156, 0.719);
 }
 
 /* Mobile */
