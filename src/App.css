@@ -467,6 +467,28 @@ footer {
 	font-size: large;
 }
 
+/*About Page*/
+.Creators{
+	display: inline-flex;
+	justify-content: center;
+	text-align: center;
+	margin-top: 2%;
+	margin-bottom: 5%;
+}
+
+.card{
+	margin-right: 10%;
+	width: 35%;
+	background-color: #DFDFDF;
+	box-shadow:
+	1.3px 2.4px 8.8px rgba(0, 0, 0, 0.063),
+	3px 5.5px 16.7px rgba(0, 0, 0, 0.072),
+	5.5px 10.1px 25.3px rgba(0, 0, 0, 0.073),
+	9.4px 17px 36.6px rgba(0, 0, 0, 0.074),
+	16px 29.1px 54.1px rgba(0, 0, 0, 0.076),
+	33px 60px 98px rgba(0, 0, 0, 0.09);
+}
+
 /* Mobile */
 @media (max-width: 320px) {
 .logo {

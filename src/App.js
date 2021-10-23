@@ -86,7 +86,7 @@ function App(){
       <Router> 
         <Header/>
         <Switch>
-          <Route path="/" exact component={() => <Home />} />
+          <Route path="/Home" exact component={() => <Home />} />
           <Route path="/Museum" exact component={() => <Museum />} />
           <Route path="/MintStation" exact component={() => <MintStation />} />
           <Route path="/MarketPlace" exact component={() => <MarketPlace />} />

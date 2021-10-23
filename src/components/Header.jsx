@@ -3,16 +3,16 @@ import { Link, withRouter } from "react-router-dom";
 
 function Header(props) {
   return (
-  <header> <Link to="/">
+  <header> <Link to="/Home">
     <h4 className="logo">CR3W MUSEUM</h4>
     </Link>
     <nav>
       <ul>
         <li                
         class={`nav-item  ${
-            props.location.pathname === "/" ? "active" : ""
+            props.location.pathname === "/Home" ? "active" : ""
             }`}>
-                <Link to="/">HOME</Link>
+                <Link to="/Home">HOME</Link>
         </li>
 		<li                
             class={`nav-item  ${
