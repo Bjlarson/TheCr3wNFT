@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ethers } from "ethers";
 import './App.css';
-import { Component } from "react";
-//import { Header, Footer, Donation} from "./components";
-//import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/Header";
 import Home from "./components/Home";
-import Contact from "./components/Contact";
 import Museum from "./components/Museum";
+import MintStation from "./components/MintStation";
+import MarketPlace from "./components/MarketPlace";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function MetamaskAccountButton  ()  {
   window.ethereum.request({ method: 'eth_requestAccounts' })
@@ -81,9 +82,19 @@ function App(){
     console.log("accountAddress");
   }
   return (
-    <div className="container"> 
-      <Museum/>
-      <Footer/>
+    <div className="container">
+      <Router> 
+        <Header/>
+        <Switch>
+          <Route path="/" exact component={() => <Home />} />
+          <Route path="/Museum" exact component={() => <Museum />} />
+          <Route path="/MintStation" exact component={() => <MintStation />} />
+          <Route path="/MarketPlace" exact component={() => <MarketPlace />} />
+          <Route path="/About" exact component={() => <About />} />
+          <Route path="/Contact" exact component={() => <Contact />} />
+        </Switch>
+        <Footer/>
+      </Router>
 	  </div>
   );
 }

@@ -20,20 +20,17 @@ function Header(props) {
             }`}>
             <Link to="/Museum" >MUSEUM</Link>
         </li>
-        <li>
-            <Link >MUSEUM</Link>
-        </li>
         <li                 
             class={`nav-item  ${
                 props.location.pathname === "/MarketPlace" ? "active" : ""
             }`}>
-             <Link to="/MarketPlace">MARKETPLACE</Link>
+             <Link to="/MarketPlace">MARKET PLACE</Link>
         </li>
         <li                 
             class={`nav-item  ${
-                props.location.pathname === "/Contact" ? "active" : ""
+                props.location.pathname === "/MintStation" ? "active" : ""
             }`}>
-             <Link to="Contact">CONTACT</Link>
+             <Link to="MintStation">MINTING STATION</Link>
         </li>
         <li              
             class={`nav-item  ${
