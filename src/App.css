@@ -1,6 +1,6 @@
 /* Body */
 body {
-	font-family: source-sans-pro;
+	font-family: Sans-serif;
 	background-color: #d4d4d4;
 	margin-top: 0px;
 	margin-right: 0px;
@@ -36,10 +36,10 @@ header nav ul {
 nav ul li {
 	float: left;
 	color: #DFF0F3;
-	font-size: 16px;
+	font-size: 12px;
 	text-align: left;
 	margin-right: 25px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	font-weight: bold;
 	transition: all 0.3s linear;
 }
@@ -487,6 +487,41 @@ footer {
 	9.4px 17px 36.6px rgba(0, 0, 0, 0.074),
 	16px 29.1px 54.1px rgba(0, 0, 0, 0.076),
 	33px 60px 98px rgba(0, 0, 0, 0.09);
+}
+
+.NFTAbout{
+	width: auto;
+	height: 500px;
+	padding-top: 3%;
+	padding-bottom: 5%;
+}
+
+.MuseumInfo{
+	width: auto;
+	height: 400px;
+	padding-top: 3%;
+	padding-bottom: 6%;
+	background-color: rgb(46, 46, 46);
+	color:#b9b9b9;
+}
+
+.AHeader{
+	margin-top: 10%;
+	margin-left: 5%;
+	font-size: xx-Large;
+}
+
+.AboutSubHeader {
+	font-size: x-large;
+}
+
+.AboutParagraph{
+	margin-top: 1%;
+	margin-right: 15%;
+	margin-left: 10%;
+	margin-bottom: 10%;
+	font-size: 18px;
+	float:left;
 }
 
 /* Mobile */
