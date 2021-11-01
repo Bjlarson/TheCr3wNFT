@@ -1,16 +1,10 @@
 import React from "react";
+import Search from "./Search";
 
 function MarketPlace() {
   return (
 	<div>
-        <section>
-            <h2 className = "MarketHeader">MarketPlace</h2>
-            <h4 className = "MarketSubHeader">Sell your NFT to other!</h4>
-        </section>
-        <section>
-            <input className="Search"  type="text" id="SearchPhrase"  placeholder="Search"/>
-            <button className = "SearchButton">Search</button>
-        </section>
+		<Search SearchTitle="Marketplace" Subtitle="Buy and Sell NFT's" SearchPH="Find an NFT"/>
 	    <section className="SaleItems">
       		<img src="https://purepng.com/public/uploads/large/purepng.com-donutdonutdoughnutsweetsnack-1411527416743kegtg.png" alt="" width="400" height="200" className="Images"/>
 			<img src="https://purepng.com/public/uploads/large/purepng.com-donutdonutdoughnutsweetsnack-1411527416743kegtg.png" alt="" width="400" height="200" className="Images"/>

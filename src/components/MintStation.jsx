@@ -1,19 +1,13 @@
 import React from "react";
+import Search from "./Search";
+import NFTInfoBox from "./NFTInfo";
 
 function MintStation() {
   return (
 	<div>
-        <section className="SearchHeaderSection">
-			<div>
-            	<h2 className = "SearchHeader">Minting Station</h2>
-            	<h4 className = "SearchSubHeader">Find the Collection for You</h4>
-			</div>
-			<div>
-            	<input className="Search"  type="text" id="SearchPhrase"  placeholder="Find a Collection"/>
-            	<button className = "SearchButton">Search</button>
-			</div>
-        </section>
+		<Search SearchTitle="Minting Station" Subtitle="Find the Collection for You" SearchPH="Find a Collection"/>
 	    <section className="MintItems">
+			<NFTInfoBox title="Test1" image="./Pictures/BannannaPics/1.png" about="First" price=".00 Eth"/>
       		<img src="https://purepng.com/public/uploads/large/purepng.com-donutdonutdoughnutsweetsnack-1411527416743kegtg.png" alt="" width="400" height="200" className="Images"/>
 			<img src="https://purepng.com/public/uploads/large/purepng.com-donutdonutdoughnutsweetsnack-1411527416743kegtg.png" alt="" width="400" height="200" className="Images"/>
 			<img src="https://pngimg.com/uploads/alien/alien_PNG81.png" alt="" width="400" height="200" className="Images"/>
