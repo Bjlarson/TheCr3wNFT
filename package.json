@@ -1,7 +1,7 @@
 {
   "name": "nftmusium",
   "version": "0.1.0",
-  "homepage": "Https://cr3wmuseum.com/home/",
+  "homepage": "https://gallant-hamilton-3b75ca.netlify.app//home/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
