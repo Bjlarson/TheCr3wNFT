@@ -68,20 +68,75 @@ ul li:hover a {
 	background-color: #d4d4d4;
 }
 .FeaturedImages{
+	height: 800px;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
-.Images {
-	width: 30%;
+
+/* NFTInfoBox*/
+
+.NFTInfoBox{
+	display: inline-block;
+	background-color: rgb(224, 224, 224);
+	width: 280px;
+	height: 365px;
+	margin-top: 10px;
+	margin-right: 2.5%;
+	margin-bottom: 1%;
+	margin-left: 2.5%;
+	border-radius: 10px;
+	box-shadow: 
+	0px 25.5px 19.1px -23px rgba(0, 0, 0, -0.004),
+	0px 38px 34.5px -23px rgba(0, 0, 0, 0.015),
+	0px 46.3px 47.7px -23px rgba(0, 0, 0, 0.043),
+	0px 54.6px 61.5px -23px rgba(0, 0, 0, 0.059),
+	0px 67.5px 82.8px -23px rgba(0, 0, 0, 0.067),
+	0px 108px 150px -23px rgba(0, 0, 0, 0.07)
+  ;
+}
+
+.NFTTitle{
+	margin-top: 2px;
+	margin-bottom: 1px;
+	margin-left: 5px;
+	color: rgb(78, 78, 78);
+	
+}
+
+.NFTImage {
+	width: 90%;
 	height: auto;
-  	min-width: px;
-	margin-left: auto;
+	margin-left: 5%;
+	margin-right: 5%;
 	margin-right: auto;
-	padding-left: 1.5%;
-	padding-right: 1.5%;
+	margin-bottom: 0px;
 	padding-bottom: 5px;
 }
+
+.NFTInfo{
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.BuyNFT{
+	float: right;
+	margin-right: 10px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .5px;
+	border: 3px solid #D4D4D4AF;
+	color: #414141;
+  background-color: rgba(168, 168, 168, 0.801);;
+	transition: all 0.2s linear;
+}
+
+
+
 /* Hero Section */
 .Featured {
 	padding-top: 100px;
@@ -289,7 +344,7 @@ footer {
 	display: none;
 }
 
-/* Search mint/marketplace */
+/* Search Mint/marketplace */
 .SearchHeaderSection{
 	width: 100%;
 	margin-left: 30%;
@@ -348,7 +403,6 @@ textarea:focus, input:focus {
 	;
 }
 	
-
 .SearchButton{
 	width: 100px;
 	margin-top: px;

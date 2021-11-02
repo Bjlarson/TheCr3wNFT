@@ -2,28 +2,53 @@ import React from "react";
 import Search from "./Search";
 import NFTInfoBox from "./NFTInfo";
 
+import one from "./Pictures/BannannaPics/1.png";
+import two from "./Pictures/BannannaPics/2.png";
+import three from "./Pictures/BannannaPics/3.png";
+import four from "./Pictures/BannannaPics/4.png";
+import five from "./Pictures/BannannaPics/5.png";
+import six from "./Pictures/BannannaPics/6.png";
+import seven from "./Pictures/BannannaPics/7.png";
+import eight from "./Pictures/BannannaPics/8.png";
+import nine from "./Pictures/BannannaPics/9.png";
+import ten from "./Pictures/BannannaPics/10.png";
+import eleven from "./Pictures/BannannaPics/11.png";
+import twelve from "./Pictures/BannannaPics/12.png";
+import thirteen from "./Pictures/BannannaPics/13.png";
+import fourteen from "./Pictures/BannannaPics/14.png";
+import fifteen from "./Pictures/BannannaPics/15.png";
+import sixteen from "./Pictures/BannannaPics/16.png";
+import seventeen from "./Pictures/BannannaPics/17.png";
+import eightteen from "./Pictures/BannannaPics/18.png";
+import nineteen from "./Pictures/BannannaPics/19.png";
+import twenty from "./Pictures/BannannaPics/20.png";
+
+
 function MintStation() {
   return (
 	<div>
 		<Search SearchTitle="Minting Station" Subtitle="Find the Collection for You" SearchPH="Find a Collection"/>
 	    <section className="MintItems">
-			<NFTInfoBox title="Test1" image="./Pictures/BannannaPics/1.png" about="First" price=".00 Eth"/>
-      		<img src="https://purepng.com/public/uploads/large/purepng.com-donutdonutdoughnutsweetsnack-1411527416743kegtg.png" alt="" width="400" height="200" className="Images"/>
-			<img src="https://purepng.com/public/uploads/large/purepng.com-donutdonutdoughnutsweetsnack-1411527416743kegtg.png" alt="" width="400" height="200" className="Images"/>
-			<img src="https://pngimg.com/uploads/alien/alien_PNG81.png" alt="" width="400" height="200" className="Images"/>
-			<img src="https://i.pinimg.com/originals/fd/94/e1/fd94e14c173efe3f18db004060474edd.png" alt="" width="400" height="200" className="Images"/>
-			<img src="https://cdn-img-0.wanelo.com/p/422/857/5f1/5d1a094499f43283956ccc1/x354-q80.jpg" alt="" width="400" height="200" className="Images"/>
-			<img src="https://i.pinimg.com/originals/49/cd/36/49cd361a200b0a6aa65d564cbe99fced.jpg" alt="" width="400" height="200" className="Images"/>
-			<img src="https://pngimg.com/uploads/smoke/smoke_PNG55142.png" alt="" width="400" height="200" class="Images"/>      			
-			<img src="https://purepng.com/public/uploads/large/purepng.com-donutdonutdoughnutsweetsnack-1411527416743kegtg.png" alt="" width="400" height="200" className="Images"/>
-			<img src="https://purepng.com/public/uploads/large/purepng.com-donutdonutdoughnutsweetsnack-1411527416743kegtg.png" alt="" width="400" height="200" className="Images"/>
-			<img src="https://pngimg.com/uploads/alien/alien_PNG81.png" alt="" width="400" height="200" className="Images"/>
-			<img src="https://i.pinimg.com/originals/fd/94/e1/fd94e14c173efe3f18db004060474edd.png" alt="" width="400" height="200" className="Images"/>
-			<img src="https://cdn-img-0.wanelo.com/p/422/857/5f1/5d1a094499f43283956ccc1/x354-q80.jpg" alt="" width="400" height="200" className="Images"/>
-			<img src="https://i.pinimg.com/originals/49/cd/36/49cd361a200b0a6aa65d564cbe99fced.jpg" alt="" width="400" height="200" className="Images"/>
-			<img src="https://pngimg.com/uploads/smoke/smoke_PNG55142.png" alt="" width="400" height="200" class="Images"/>		 		
-            <img src="https://i.pinimg.com/originals/49/cd/36/49cd361a200b0a6aa65d564cbe99fced.jpg" alt="" width="400" height="200" className="Images"/>
-			<img src="https://pngimg.com/uploads/smoke/smoke_PNG55142.png" alt="" width="400" height="200" class="Images"/>
+			<NFTInfoBox title="Test One" image={one} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Two" image={two} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Three" image={three} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Four" image={four} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Five" image={five} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Six" image={six} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Seven" image={seven} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Eight" image={eight} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Nine" image={nine} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Ten" image={ten} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Eleven" image={eleven} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Twelve" image={twelve} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Thirteen" image={thirteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Fourteen" image={fourteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Fifteen" image={fifteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Sixteen" image={sixteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Seventeen" image={seventeen} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Eighteen" image={eightteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Nineteen" image={nineteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Twenty" image={twenty} about="First test of our Upcoming NFT" price=".00 Eth"/>
   		</section>
 	</div>
   );
