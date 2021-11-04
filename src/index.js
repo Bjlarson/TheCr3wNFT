@@ -4,12 +4,6 @@ import './index.css';
 import App from './App.js';
 import reportWebVitals from './reportWebVitals';
 
-//export { default as Navigation } from "./components/Header";
-//export { default as Footer } from "./components/Footer";
-//export { default as Home } from "./Home";
-//export { default as About } from "./About";
-//export { default as Contact } from "./Contact";
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

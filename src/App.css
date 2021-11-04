@@ -68,7 +68,7 @@ ul li:hover a {
 	background-color: #d4d4d4;
 }
 .FeaturedImages{
-	height: 800px;
+	height: fit-content;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
@@ -627,14 +627,14 @@ textarea:focus, input:focus {
 
 .NFTAbout{
 	width: auto;
-	height: 600px;
+	height: fit-content;
 	padding-top: 3%;
 	padding-bottom: 5%;
 }
 
 .MuseumInfo{
 	width: auto;
-	height: 400px;
+	height: fit-content;
 	padding-top: 3%;
 	padding-bottom: 8%;
 	background-color: rgb(46, 46, 46);
@@ -655,8 +655,8 @@ textarea:focus, input:focus {
 	margin-top: 1%;
 	margin-right: 15%;
 	margin-left: 10%;
+	margin-bottom: 2%;
 	font-size: 18px;
-	float:left;
 }
 
 /* Mobile */

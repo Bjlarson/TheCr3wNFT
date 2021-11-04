@@ -20,14 +20,14 @@ function Home() {
       			Check out these NFT's to add to your collection
     		</p>
     		<div className = "FeaturedImages">
-				<NFTInfoBox title="Test One" image={one} about="First test of our Upcoming NFT" price=".00 Eth"/>
-				<NFTInfoBox title="Test Two" image={two} about="First test of our Upcoming NFT" price=".00 Eth"/>
-				<NFTInfoBox title="Test Three" image={three} about="First test of our Upcoming NFT" price=".00 Eth"/>
-				<NFTInfoBox title="Test Four" image={four} about="First test of our Upcoming NFT" price=".00 Eth"/>
-				<NFTInfoBox title="Test Five" image={five} about="First test of our Upcoming NFT" price=".00 Eth"/>
-				<NFTInfoBox title="Test Six" image={six} about="First test of our Upcoming NFT" price=".00 Eth"/>
-				<NFTInfoBox title="Test Seven" image={seven} about="First test of our Upcoming NFT" price=".00 Eth"/>
-				<NFTInfoBox title="Test Eight" image={eight} about="First test of our Upcoming NFT" price=".00 Eth"/>
+				<NFTInfoBox title="Test One" image={one} about="First test of our upcoming NFT" price=".00 Eth"/>
+				<NFTInfoBox title="Test Two" image={two} about="First test of our upcoming NFT" price=".00 Eth"/>
+				<NFTInfoBox title="Test Three" image={three} about="First test of our upcoming NFT" price=".00 Eth"/>
+				<NFTInfoBox title="Test Four" image={four} about="First test of our upcoming NFT" price=".00 Eth"/>
+				<NFTInfoBox title="Test Five" image={five} about="First test of our upcoming NFT" price=".00 Eth"/>
+				<NFTInfoBox title="Test Six" image={six} about="First test of our upcoming NFT" price=".00 Eth"/>
+				<NFTInfoBox title="Test Seven" image={seven} about="First test of our upcoming NFT" price=".00 Eth"/>
+				<NFTInfoBox title="Test Eight" image={eight} about="First test of our upcoming NFT" price=".00 Eth"/>
 	  		</div>
   		</section>
 		<Donation/>

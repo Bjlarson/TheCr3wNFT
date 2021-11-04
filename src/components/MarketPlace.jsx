@@ -28,26 +28,26 @@ function MarketPlace() {
 	<div>
 		<Search SearchTitle="Marketplace" Subtitle="Buy and Sell NFT's" SearchPH="Find an NFT"/>
 	    <section className="SaleItems">
-		<NFTInfoBox title="Test One" image={one} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Two" image={two} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Three" image={three} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Four" image={four} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Five" image={five} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Six" image={six} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Seven" image={seven} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Eight" image={eight} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Nine" image={nine} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Ten" image={ten} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Eleven" image={eleven} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Twelve" image={twelve} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Thirteen" image={thirteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Fourteen" image={fourteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Fifteen" image={fifteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Sixteen" image={sixteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Seventeen" image={seventeen} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Eighteen" image={eightteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Nineteen" image={nineteen} about="First test of our Upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Twenty" image={twenty} about="First test of our Upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test One" image={one} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Two" image={two} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Three" image={three} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Four" image={four} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Five" image={five} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Six" image={six} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Seven" image={seven} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Eight" image={eight} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Nine" image={nine} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Ten" image={ten} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Eleven" image={eleven} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Twelve" image={twelve} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Thirteen" image={thirteen} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Fourteen" image={fourteen} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Fifteen" image={fifteen} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Sixteen" image={sixteen} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Seventeen" image={seventeen} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Eighteen" image={eightteen} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Nineteen" image={nineteen} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox title="Test Twenty" image={twenty} about="First test of our upcoming NFT" price=".00 Eth"/>
   		</section>
 	</div>
   );
