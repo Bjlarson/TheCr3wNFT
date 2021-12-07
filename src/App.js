@@ -9,6 +9,7 @@ import MarketPlace from "./components/MarketPlace";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import GAabi from "./components/ABI/MuseumGATicket.json";
 
 function MetamaskAccountButton  ()  {
   window.ethereum.request({ method: 'eth_requestAccounts' })
@@ -20,7 +21,7 @@ const startPayment = async ({ setError, setTxs, ether }) => {
       throw new Error("No crypto wallet found. Please install it.");
 
     await window.ethereum.send("eth_requestAccounts");
-    const addr = "0xD1D976C184B004acBcdA1165276FF0BC16D0f1Dd"
+    const addr = "0x1d1583B1c269140575Cc0e8a0Ea125C421bbE6E8"
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
     ethers.utils.getAddress(addr);
