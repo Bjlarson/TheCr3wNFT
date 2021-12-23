@@ -1,54 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import Search from "./Search";
 import NFTInfoBox from "./NFTInfo";
-
-import one from "./Pictures/BannannaPics/1.png";
-import two from "./Pictures/BannannaPics/2.png";
-import three from "./Pictures/BannannaPics/3.png";
-import four from "./Pictures/BannannaPics/4.png";
-import five from "./Pictures/BannannaPics/5.png";
-import six from "./Pictures/BannannaPics/6.png";
-import seven from "./Pictures/BannannaPics/7.png";
-import eight from "./Pictures/BannannaPics/8.png";
-import nine from "./Pictures/BannannaPics/9.png";
-import ten from "./Pictures/BannannaPics/10.png";
-import eleven from "./Pictures/BannannaPics/11.png";
-import twelve from "./Pictures/BannannaPics/12.png";
-import thirteen from "./Pictures/BannannaPics/13.png";
-import fourteen from "./Pictures/BannannaPics/14.png";
-import fifteen from "./Pictures/BannannaPics/15.png";
-import sixteen from "./Pictures/BannannaPics/16.png";
-import seventeen from "./Pictures/BannannaPics/17.png";
-import eightteen from "./Pictures/BannannaPics/18.png";
-import nineteen from "./Pictures/BannannaPics/19.png";
-import twenty from "./Pictures/BannannaPics/20.png";
-
+import { ethers } from 'ethers';
+import VIPabi from "./../components/ABI/MuseumVIPTicket.json";
 
 function MintStation() {
+	//const [Price] = useState(() => GetMintFee())
+
+	// need to figure out use state to call funtions with variables or changing the state when the items loads
+	async function GetMintFee() {
+		const contractAddress = '0xD5b5e1d8DD2b52021E44cf51C5aa546876327459'
+		const provider = new ethers.providers.InfuraProvider('ropsten', 'd9d3bb458fde4c72b12ada12da786d99');
+		const contract = new ethers.Contract(contractAddress,VIPabi,provider);
+		const feeAmount = await contract.GetMintFee();
+		console.log(await ethers.utils.parseEther(feeAmount).toString());
+		return await ethers.utils.parseEther(feeAmount).toString();
+	  }
+
   return (
 	<div>
 		<Search SearchTitle="Minting Station" Subtitle="Find the Collection for You" SearchPH="Find a Collection"/>
 	    <section className="MintItems">
-			<NFTInfoBox title="Test One" image={one} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Two" image={two} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Three" image={three} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Four" image={four} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Five" image={five} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Six" image={six} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Seven" image={seven} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Eight" image={eight} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Nine" image={nine} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Ten" image={ten} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Eleven" image={eleven} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Twelve" image={twelve} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Thirteen" image={thirteen} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Fourteen" image={fourteen} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Fifteen" image={fifteen} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Sixteen" image={sixteen} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Seventeen" image={seventeen} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Eighteen" image={eightteen} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Nineteen" image={nineteen} about="First test of our upcoming NFT" price=".00 Eth"/>
-			<NFTInfoBox title="Test Twenty" image={twenty} about="First test of our upcoming NFT" price=".00 Eth"/>
+			<NFTInfoBox Name='General Admition Ticket' contractAddress='0x77d0BBcC8b87521550171A73ff1F185b01847d44' URI='https://www.cr3wmuseum.com/GATicket.json'Image='https://www.cr3wmuseum.com/GATicket.JPG' Description="First test of our upcoming NFT" price='.01'/>
+			<NFTInfoBox Name='VIP Ticket' contractAddress='0xF1e6A07435a77b0a0E6159c8E7158D22b2034e66' URI='https://cr3wmuseum.com/VIPTicket.json'Image='https://www.cr3wmuseum.com/VIPTicket.jpg' Description="First test of our upcoming NFT" price='.05'/>
   		</section>
 	</div>
   );
