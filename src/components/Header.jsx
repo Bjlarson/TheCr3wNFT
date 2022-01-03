@@ -1,27 +1,20 @@
 import React, {useState} from "react";
 import { Link, withRouter } from "react-router-dom";
-import { ethers } from 'ethers';
 
 function Header(props) {
     const [errorMessage,setErrorMessage] = useState(null);
-    const [defaultAccount, setDefaultAccount] = useState(null);
     const [connButtonText,setConnButtonText] = useState('Connect Wallet');
 
-    async function ConnectToWalletHandler() {
+    function ConnectToWalletHandler() {
         if(window.ethereum){
             window.ethereum.request({method: 'eth_requestAccounts'})
             .then(result => {
-                accountChangedhandler(result[0]);
+                props.setaccount(result[0]);
                 setConnButtonText('Wallet Connected');
             })
         }else{
             setErrorMessage('Need to Install Metamask');
         }
-    }
-
-    function accountChangedhandler(newAccount) {
-        setDefaultAccount(newAccount);
-        alert(newAccount);
     }
 
   return (
@@ -68,7 +61,15 @@ function Header(props) {
         </li>
       </ul>
     </nav>
-    <button onClick={() => ConnectToWalletHandler()} className="Walletbutton">{connButtonText}</button>
+    <div className="WalletConnectDiv">
+        {
+            props.address != null?<h1 className="WalletAddress">{props.address}</h1>:<button onClick={() => ConnectToWalletHandler()} className="Walletbutton">{connButtonText}</button>
+        }
+        {
+            errorMessage != null?<h1 className="WalletError">{errorMessage}</h1>:null
+        }
+    </div>
+
     </header>
   );
 }

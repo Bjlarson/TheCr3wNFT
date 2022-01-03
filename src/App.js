@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useState } from "react";
 import './App.css';
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -10,12 +11,18 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App(){
+  const [walletAddress, SetWalletAddress] = useState(null);
+
+  function accountChangedhandler(newAccount) {
+    SetWalletAddress(newAccount);
+}
+
   return (
     <div className="container">
       <Router> 
-        <Header/>
+        <Header setaccount = {accountChangedhandler} address = {walletAddress}/>
         <Switch>
-          <Route path="/" exact component={() => <Home />} />
+          <Route path="/" exact component={() => <Home address={walletAddress}/>} />
           <Route path="/Museum" exact component={() => <Museum />} />
           <Route path="/MintStation" exact component={() => <MintStation />} />
           <Route path="/MarketPlace" exact component={() => <MarketPlace />} />

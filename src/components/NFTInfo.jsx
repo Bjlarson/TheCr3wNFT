@@ -1,33 +1,87 @@
 import PropTypes from 'prop-types';
+import React, {useState, useEffect} from 'react';
 import { ethers } from 'ethers';
 
-export default function NFTInfoBox ({Name, contractAddress, URI, Image ,Description, price}) {
+export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image ,Description, max, PerPerson}) {
+	const [TokenCost, setTokenCost] = useState(() => GetTokenAmount());
+  const [CurrentTokenID, setTokenID] = useState(() => GetTokenId());
+  const [addressBalance, setAddressBalance] = useState(() => getBalance());
+  const [ethBalance, setAddressEthBalance] = useState(() => GetEthBalance());
 
-  async function GetTokenId(ABI) {
-    const contractAddress = ABI.networks['3'].address;
-    const provider = new ethers.providers.InfuraProvider('ropsten', 'd9d3bb458fde4c72b12ada12da786d99');
-    const contract = new ethers.Contract(contractAddress,ABI,provider);
-    const tokenID = await contract.GetCurrentTokenId();
-    return await tokenID.toString();
+  useEffect(() => {
+    GetEthBalance();
+    getBalance();
+  }, [{Address}]);
+
+	function GetTokenAmount() {
+    const abi = ['function GetMintFee() external view returns(uint)'];
+		const provider = new ethers.providers.InfuraProvider('ropsten', 'bb4510b38a1942eb9a67ef34c217d6a0');
+		const contract = new ethers.Contract(contractAddress,abi,provider);
+    
+		contract.GetMintFee()
+    .then(result => {
+      console.log(ethers.utils.formatEther(result.toString()));
+      setTokenCost(ethers.utils.formatEther(result.toString()));
+    })
+	}
+
+  function GetTokenId() {
+    const abi = ['function GetCurrentTokenId() external view returns(uint)']
+    const provider = new ethers.providers.InfuraProvider('ropsten', 'bb4510b38a1942eb9a67ef34c217d6a0');
+    const contract = new ethers.Contract(contractAddress,abi,provider);
+    contract.GetCurrentTokenId()
+    .then(result => {
+      console.log(result.toString());
+      setTokenID(result.toString());
+    })
   }
   
-  async function GetBalance(contractAddress) {
+  function getBalance() {
+    if(Address == null){
+      return;
+    }
     const abi = ['function balanceOf(address owner) public view returns (uint256)'];
     const metamaskProvider = new ethers.providers.Web3Provider(window.ethereum);
     const contract = new ethers.Contract(contractAddress,abi,metamaskProvider);
-    const balance = await contract.balanceOf('0xdc24316b9ae028f1497c275eb9192a3ea0f67022');
-    return balance;
+    contract.balanceOf(Address)
+    .then(result => {
+      console.log('has token ' + result)
+      setAddressBalance(result)
+    })
+  }
+
+  function GetEthBalance() {
+    if(Address == null){
+      return;
+    }
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    provider.getBalance(Address)
+    .then(balance => {
+      console.log(ethers.utils.formatEther(balance.toString()))
+      setAddressEthBalance(ethers.utils.formatEther(balance.toString()))
+    })
   }
   
-  async function CreateNFT(contractAddress, ABI, uri, price) {
+  async function CreateNFT(contractAddress, ABI, uri) {
+    if(Address == null){
+      alert("Please Connect a Wallet");
+      return;
+    }
+
+    if(addressBalance >= PerPerson){
+      alert("You already have the allowed amount");
+      return;
+    }
+
+    if(ethBalance <= TokenCost){
+      alert("You do not have the required funds");
+      return;
+    }
+
     const metamaskProvider = new ethers.providers.Web3Provider(window.ethereum);
-    // if(GetBalance(metamaskProvider.address) >= 1){
-    //   alert("You already own a ticket")
-    //   return;
-    // }
     const signer = metamaskProvider.getSigner();
     const contract = new ethers.Contract(contractAddress,ABI,signer);
-    let val = ethers.utils.parseEther(price);
+    let val = ethers.utils.parseEther(TokenCost.toString());
     console.log(val.toString());
     let transaction = await contract.createNFT(uri, { value: val.toString() });
     console.log("Transaction Sent");
@@ -37,10 +91,13 @@ export default function NFTInfoBox ({Name, contractAddress, URI, Image ,Descript
     return (
         <div className="NFTInfoBox">
             <h2 className = "NFTTitle">{Name}</h2>
+            {
+              CurrentTokenID <= max?<h2 className = "NFTTokenId">{CurrentTokenID}</h2>:<h2 className = "NFTTokenId">Sold Out</h2>
+            }
             <img src={Image} className = "NFTImage" width="300" height="300" ></img>
             <div className = "BoxBottom">
                 <p className = "NFTInfo">{Description}</p>
-                <button onClick={() => CreateNFT(contractAddress, ['function createNFT(string memory tokenURI) public payable returns (uint256)'], URI, price)} className = "BuyNFT">Buy for {price}</button>
+                <button onClick={() => CreateNFT(contractAddress, ['function createNFT(string memory tokenURI) public payable returns (uint256)'], URI)} className = "BuyNFT">Buy for {TokenCost}</button>
             </div>
         </div>
     )
