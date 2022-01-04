@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { ethers } from 'ethers';
 
 export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image ,Description, max, PerPerson}) {
@@ -7,11 +7,6 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
   const [CurrentTokenID, setTokenID] = useState(() => GetTokenId());
   const [addressBalance, setAddressBalance] = useState(() => getBalance());
   const [ethBalance, setAddressEthBalance] = useState(() => GetEthBalance());
-
-  useEffect(() => {
-    GetEthBalance();
-    getBalance();
-  }, [{Address}]);
 
 	function GetTokenAmount() {
     const abi = ['function GetMintFee() external view returns(uint)'];
@@ -78,14 +73,18 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
       return;
     }
 
-    const metamaskProvider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = metamaskProvider.getSigner();
-    const contract = new ethers.Contract(contractAddress,ABI,signer);
-    let val = ethers.utils.parseEther(TokenCost.toString());
-    console.log(val.toString());
-    let transaction = await contract.createNFT(uri, { value: val.toString() });
-    console.log("Transaction Sent");
-    await transaction.wait();
+    try{
+      const metamaskProvider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = metamaskProvider.getSigner();
+      const contract = new ethers.Contract(contractAddress,ABI,signer);
+      let val = ethers.utils.parseEther(TokenCost.toString());
+      console.log(val.toString());
+      let transaction = await contract.createNFT(uri, { value: val.toString() });
+      console.log("Transaction Sent");
+      await transaction.wait();
+    } catch (err) {
+      console.log(err.message);
+    }
   }
 
     return (

@@ -16,7 +16,7 @@ function Donation() {
       const signer = provider.getSigner();
       ethers.utils.getAddress(accountAddress[0]);
       const tx = await signer.sendTransaction({
-        to: "0xD1D976C184B004acBcdA1165276FF0BC16D0f1Dd",
+        to: "0xbf8ee486Bd911aaEb675025Bc493794A47a04FB4",
         value: ethers.utils.parseEther(document.getElementById("ether").value)
       });
 

@@ -4,10 +4,6 @@ import NFTInfoBox from "./NFTInfo";
 
 function Home({address}) {
 
-	useEffect(() => {
-		console.log('using effect home' + {address})
-	  }, [{address}]);
-
   return (
 	<div>
 		<section className="Featured" id="Featured">
