@@ -15,7 +15,6 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
     
 		contract.GetMintFee()
     .then(result => {
-      console.log(ethers.utils.formatEther(result.toString()));
       setTokenCost(ethers.utils.formatEther(result.toString()));
     })
 	}
@@ -35,14 +34,15 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
     if(Address == null){
       return;
     }
+
     const abi = ['function balanceOf(address owner) public view returns (uint256)'];
     const metamaskProvider = new ethers.providers.Web3Provider(window.ethereum);
     const contract = new ethers.Contract(contractAddress,abi,metamaskProvider);
     contract.balanceOf(Address)
     .then(result => {
-      console.log('has token ' + result)
       setAddressBalance(result)
     })
+    .catch(error => console.log(error))
   }
 
   function GetEthBalance() {
@@ -52,7 +52,6 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     provider.getBalance(Address)
     .then(balance => {
-      console.log(ethers.utils.formatEther(balance.toString()))
       setAddressEthBalance(ethers.utils.formatEther(balance.toString()))
     })
   }
@@ -78,9 +77,8 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
       const signer = metamaskProvider.getSigner();
       const contract = new ethers.Contract(contractAddress,ABI,signer);
       let val = ethers.utils.parseEther(TokenCost.toString());
-      console.log(val.toString());
       let transaction = await contract.createNFT(uri, { value: val.toString() });
-      console.log("Transaction Sent");
+      alert("Transaction Sent");
       await transaction.wait();
     } catch (err) {
       console.log(err.message);

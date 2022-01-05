@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useState } from "react";
 import './App.css';
+import {slide as Menu} from 'react-burger-menu';
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Museum from "./components/Museum";
