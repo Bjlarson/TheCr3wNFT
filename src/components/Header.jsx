@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { Link, withRouter } from "react-router-dom";
+import logo from "./Pictures/TheCr3wNFTLogoBlack.svg"
 
 function Header(props) {
     const [errorMessage,setErrorMessage] = useState(null);
@@ -19,6 +20,7 @@ function Header(props) {
 
   return (
   <header> <Link to="/">
+    <img className= "logoimg" alt="logo" src={logo} width="40" height="40"/>
     <h4 className="logo">CR3W MUSEUM</h4>
     </Link>
     <nav>
@@ -37,15 +39,9 @@ function Header(props) {
         </li>
         <li                 
             class={`nav-item  ${
-                props.location.pathname === "/MarketPlace" ? "active" : ""
+                props.location.pathname === "/TicketStand" ? "active" : ""
             }`}>
-             <Link to="/MarketPlace">MARKET PLACE</Link>
-        </li>
-        <li                 
-            class={`nav-item  ${
-                props.location.pathname === "/MintStation" ? "active" : ""
-            }`}>
-             <Link to="MintStation">MINTING STATION</Link>
+             <Link to="/TicketStand">TICKET STAND</Link>
         </li>
         <li              
             class={`nav-item  ${
@@ -69,7 +65,6 @@ function Header(props) {
             errorMessage != null?<h1 className="WalletError">{errorMessage}</h1>:null
         }
     </div>
-
     </header>
   );
 }

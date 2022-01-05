@@ -3,9 +3,9 @@ import { useState } from "react";
 import './App.css';
 import {slide as Menu} from 'react-burger-menu';
 import Header from "./components/Header";
-import Home from "./components/Home";
+import Main from "./components/Main";
 import Museum from "./components/Museum";
-import MintStation from "./components/MintStation";
+import TicketStand from "./components/TicketStand";
 import MarketPlace from "./components/MarketPlace";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -23,9 +23,9 @@ function App(){
       <Router> 
         <Header setaccount = {accountChangedhandler} address = {walletAddress}/>
         <Switch>
-          <Route path="/" exact component={() => <Home address={walletAddress}/>} />
+          <Route path="/" exact component={() => <Main address={walletAddress}/>} />
           <Route path="/Museum" exact component={() => <Museum />} />
-          <Route path="/MintStation" exact component={() => <MintStation />} />
+          <Route path="/TicketStand" exact component={() => <TicketStand address={walletAddress} />} />
           <Route path="/MarketPlace" exact component={() => <MarketPlace />} />
           <Route path="/About" exact component={() => <About />} />
           <Route path="/Contact" exact component={() => <Contact />} />

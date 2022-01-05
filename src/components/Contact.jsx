@@ -3,6 +3,7 @@ import insta from "./Pictures/Instagram.png"
 import twitter from "./Pictures/twitter-logo.png"
 import spotify from "./Pictures/Spotify-Logo.png"
 import email from "./Pictures/email.png"
+import discord from "./Pictures/discord.PNG"
 
 function GoToSite(location) {
 	window.location = location;
@@ -13,6 +14,7 @@ const ref = React.useRef(null)
 const iref = React.useRef(null)
 const tref = React.useRef(null)
 const sref = React.useRef(null)
+const dref = React.useRef(null)
 
 const callbackFunction = (entries) => {
   entries.forEach(entry => {
@@ -34,17 +36,26 @@ React.useEffect(() => {
   if(tref.current) observer.observe(tref.current)
   if(sref.current) observer.observe(sref.current)
   if(ref.current) observer.observe(ref.current)
+  if(dref.current) observer.observe(ref.current)
 
   return () => {
     if(iref.current) observer.unobserve(iref.current)
     if(tref.current) observer.unobserve(tref.current)
     if(sref.current) observer.unobserve(sref.current)
     if(ref.current) observer.unobserve(ref.current)
+    if(dref.current) observer.observe(dref.current)
   }
 }, [ref,options])
 
   return (
     <section className="Contact" id="contact">
+      <div className="Discord">
+        <div className = "Dis">
+    	    <h2 className ="dtitle"> Instagram </h2>
+		      <p className="dAbout">Follow us on our Instagram @cr3w_collections for the latest drop news and pictures. Send a message or leave us a comment on one of our pictures.</p>
+        </div>
+        <img className = "DiscordLogo" ref={dref} alt="Discord Logo" src={discord} width="200" height="200" onClick = {() => GoToSite("https://discord.com/invite/arUyK56ghE")}/>
+	    </div>
 	    <div className="Instagram">
         <div className = "insta">
     	    <h2 className ="ititle"> Instagram </h2>
@@ -53,7 +64,7 @@ React.useEffect(() => {
         <img className = "Instalogo" ref={iref} alt="Instagram Logo" src={insta} width="200" height="200" onClick = {() => GoToSite("https://www.instagram.com/cr3w_collections/")}/>
 	    </div>
       <div className="Twitter">
-        <img className = "Twitterlogo" ref={tref} alt="Twitter Logo" src={twitter} width="200" height="200" onClick = {() => GoToSite("https://www.twitter.com/CryptoCr3w")} />
+        <img className = "Twitterlogo" ref={tref} alt="Twitter Logo" src={twitter} width="200" height="200" onClick = {() => GoToSite("https://twitter.com/TheCr3wNFT")} />
         <div className = "tweet">
           <h2 className="tHeader"> Twitter </h2>
           <p className="tAbout">Follow us on Twitter @CryptoCr3w to get the latest news and updates. DM us if you have questions or ideas for future projects.</p>
