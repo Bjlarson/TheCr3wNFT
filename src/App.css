@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
 /* Body */
 body {
 	font-family: Sans-serif;
@@ -106,24 +108,28 @@ ul li:hover a {
 
 /* Main */
 .Welcome{
+	font-family: 'Forum', cursive;
 	display:block;
-	font-size: 90px;
+	font-size: 120px;
 	padding: 20px;
-	margin-top: 5%;
+	margin-top: 3%;
 	margin-bottom: 10%;
 	text-align: center;
 	color: #278AB0;
+	letter-spacing: 15PX;
 }
 .Title1{
 	margin:0;
-	padding-right: 25%;
+	padding-right: 0%;
 }
 .Title2{
 	margin:0;
+	font-size: large;
 }
 .Title3{
 	margin:0;
-	padding-left: 25%;
+	padding-left: 2%;
+	font-size: large;
 }
 
 
@@ -202,14 +208,20 @@ ul li:hover a {
 }
 .JoinTitle
 {
+	font-family: 'Forum', cursive;
 	color: #278AB0;
 	margin: 0%;
 	margin-top: 5%;
+	letter-spacing: 25px;
+	font-size: 120px;
 }
 .TheCrewTitle{
+	font-family: 'Forum', cursive;
 	color:#278AB0;
 	margin:0;
 	margin-bottom: 3%;
+	letter-spacing: 15px;
+	font-size: 60px;
 }
 .AboutRoadMap{
 	padding-top: 15px;
@@ -223,14 +235,18 @@ ul li:hover a {
 /*column section */
 .columns{
 	margin-top: 30px;
-	height: fit-content;
-	display: grid;
+	display: flex;
+	justify-content: space-between;
 	grid-template-columns: 1fr 1fr 1fr;
+	margin: 20px;
+	color: #1a3042;
 }
 .column{
 	width: 60%;
-	background-color: ivory;
+	margin: 3%;
+	background-color: #278AB0;
 	border-radius: 25px;
+	text-align: center;
 }
 
 /* Hero Section */
@@ -252,7 +268,7 @@ ul li:hover a {
 }
 /* Parallax Section */
 .banner {
-	background-color: #2D9AB7;
+	background-color: #278AB0;
 	background-image: url("https://pbs.twimg.com/profile_banners/1438539191466430468/1639495128/1500x500");
 	height: 400px;
 	background-attachment: fixed;
@@ -261,7 +277,7 @@ ul li:hover a {
 	margin-bottom: 30px;
 }
 .parallax {
-	color: #EAEAE0;
+	color: ivory;
 	text-align: left;
 	padding-left: 10%;
 	padding-top: 110px;
@@ -272,7 +288,7 @@ ul li:hover a {
 }
 .parallax_description {
 	font-size: large;
-	color: #EAEAE0;
+	color: ivory;
 	text-align: left;
 	padding-left: 10%;
 	font-weight: lighter;
@@ -292,7 +308,7 @@ ul li:hover a {
 	width: 250px;
 	height: 50px;
 	vertical-align: middle;
-	background: rgba(156, 156, 156, 0.719);
+	background: #2789b083;
 	border: medium;
 	border-radius: 15px;
   	margin-bottom: 5px;
@@ -301,25 +317,25 @@ ul li:hover a {
   	text-decoration-color: #FFFFFF;
 }
 ::placeholder {
-  color: rgb(238, 238, 238);
+  color: ivory;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
- color: rgb(238, 238, 238);
+ color: ivory;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
- color: rgb(238, 238, 238);
+ color: ivory;
 
 }
 input, select, textarea{
-    color: #f8f8f8;
+    color: ivory;
 	padding-left: 10px;
 }
 
 textarea:focus, input:focus {
-    color: #f8f8f8;
+    color: ivory;
 	;
 }
 .DonationButon{
@@ -339,19 +355,18 @@ textarea:focus, input:focus {
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 2px;
-	border: 3px solid #D4D4D4AF;
-	color: #414141;
-  background-color: rgba(168, 168, 168, 0.801);;
+	border: 3px solid #1193c783;
+	color: ivory;
+  background-color: #2789b083;;
 	transition: all 0.2s linear;
 }
 .DonationButon:hover {
-	background-color: #DFDFDF;
-	color: #7c7b7b;
+	background-color: #07506dc7;
+	color: rgb(194, 194, 194);
 	cursor: pointer;
 }
 /* More info */
 footer {
-	background-color: #FFFFFF;
 	padding-bottom: 35px;
 }
 .footer_column {
@@ -366,7 +381,6 @@ footer .footer_column h3 {
 }
 footer .footer_column p {
 	color: #717070;
-	background-color: #FFFFFF;
 }
 .cards {
 	width: 100%;
@@ -392,6 +406,9 @@ footer .footer_column p {
 	margin-right: auto;
 	margin-bottom: 15px;
 }
+.footerButton{
+	background-color: #1DC690;
+}
 .button {
 	float: left;
 	width: 60px;
@@ -409,32 +426,28 @@ footer .footer_column p {
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 2px;
-	border: 3px solid #D4D4D4AF;
-	color: #9808A0;
+	border: 3px solid #1a3042;
+	background-color: #1DC690;
 	transition: all 0.3s linear;
 }
 .button:hover {
-	background-color: #DFDFDF;
-	color: #AE61B5;
+	background-color: #12805d;
 	cursor: pointer;
 }
 .copyright {
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: #717070;
-	color: #FFFFFF;
+	color: ivory;
 	text-transform: uppercase;
 	font-weight: lighter;
 	letter-spacing: 2px;
 	border-top-width: 2px;
 }
 .footer_banner {
-	background-color: #B3B3B3;
 	padding-top: 60px;
 	padding-bottom: 60PX;
 	margin-bottom: 0px;
-	background-repeat: repeat;
 }
 footer {
 	display: inline-block;

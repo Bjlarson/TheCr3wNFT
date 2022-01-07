@@ -8,10 +8,11 @@ function Header(props) {
 
     function ConnectToWalletHandler() {
         if(window.ethereum){
+            setErrorMessage(null);
             window.ethereum.request({method: 'eth_requestAccounts'})
             .then(result => {
                 props.setaccount(result[0]);
-                setConnButtonText('Wallet Connected');
+                setConnButtonText('CONNECTED');
             })
         }else{
             setErrorMessage('Need to Install Metamask');
@@ -37,17 +38,11 @@ function Header(props) {
             }`}>
             <Link to="/Museum" >MUSEUM</Link>
         </li>
-        <li                 
-            class={`nav-item  ${
-                props.location.pathname === "/TicketStand" ? "active" : ""
-            }`}>
-             <Link to="/TicketStand">TICKET STAND</Link>
-        </li>
         <li              
             class={`nav-item  ${
-                props.location.pathname === "/About" ? "active" : ""
+                props.location.pathname === "/Info" ? "active" : ""
             }`}>
-                <Link to="/About">ABOUT</Link>
+                <Link to="/Info">INFO</Link>
         </li>
         <li                 
             class={`nav-item  ${
@@ -58,9 +53,7 @@ function Header(props) {
       </ul>
     </nav>
     <div className="WalletConnectDiv">
-        {
-            props.address != null?<h3 className="WalletAddress">{props.address}</h3>:<p onClick={() => ConnectToWalletHandler()} className="Walletbutton">{connButtonText}</p>
-        }
+        <p onClick={() => ConnectToWalletHandler()} className="Walletbutton">{connButtonText}</p>
         {
             errorMessage != null?<h1 className="WalletError">{errorMessage}</h1>:null
         }

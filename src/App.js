@@ -7,7 +7,7 @@ import Main from "./components/Main";
 import Museum from "./components/Museum";
 import TicketStand from "./components/TicketStand";
 import MarketPlace from "./components/MarketPlace";
-import About from "./components/About";
+import Info from "./components/Info";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -27,7 +27,7 @@ function App(){
           <Route path="/Museum" exact component={() => <Museum />} />
           <Route path="/TicketStand" exact component={() => <TicketStand address={walletAddress} />} />
           <Route path="/MarketPlace" exact component={() => <MarketPlace />} />
-          <Route path="/About" exact component={() => <About />} />
+          <Route path="/Info" exact component={() => <Info />} />
           <Route path="/Contact" exact component={() => <Contact />} />
         </Switch>
         <Footer/>

@@ -9,7 +9,7 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
   const [ethBalance, setAddressEthBalance] = useState(() => GetEthBalance());
 
 	function GetTokenAmount() {
-    if(Address == null){
+    if(!window.ethereum){
       return;
     }
 
@@ -24,7 +24,7 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
 	}
 
   function GetTokenId() {
-    if(Address == null){
+    if(!window.ethereum){
       return;
     }
     const abi = ['function GetCurrentTokenId() external view returns(uint)']
