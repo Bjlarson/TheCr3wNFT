@@ -16,11 +16,6 @@ header {
 	align-items: center;
 	padding: 30px 2%;
 }
-.logoimg{
-
-}
-.logo {
-}
 .WalletConnectDiv {
 	display: inline-flex;
 	float: right;
@@ -53,11 +48,10 @@ header {
 	cursor: pointer;
 }
 .WalletAddress{
+	vertical-align: top;
 	color:#12805d;
-	margin-top: 25px;
-}
-nav {
-
+	font-size: small;
+	padding-bottom: 10px;
 }
 nav ul {
 	margin: 0;
@@ -68,7 +62,8 @@ nav ul li {
 	color: #DFF0F3;
 	list-style: none;
 	font-size: 20px;
-	margin-right: 25px;
+	margin-right: 10px;
+	margin-left: 10px;
 	letter-spacing: 1px;
 	font-weight: bold;
 
@@ -100,75 +95,140 @@ ul li:hover a {
 	margin-right: auto;
 	height: 1000px;
 }
-.FeaturedImages{
+.Featured{
+	background-color: ivory;
 	height: fit-content;
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
 }
+
+/* Main */
+.Welcome{
+	display:block;
+	font-size: 90px;
+	padding: 20px;
+	margin-top: 5%;
+	margin-bottom: 10%;
+	text-align: center;
+	color: #278AB0;
+}
+.Title1{
+	margin:0;
+	padding-right: 25%;
+}
+.Title2{
+	margin:0;
+}
+.Title3{
+	margin:0;
+	padding-left: 25%;
+}
+
 
 /* NFTInfoBox*/
 
 .NFTInfoBox{
-	display: inline-block;
-	background-color: rgb(224, 224, 224);
-	width: 280px;
-	height: 365px;
-	margin-top: 10px;
-	margin-right: 2.5%;
-	margin-bottom: 1%;
-	margin-left: 2.5%;
-	border-radius: 10px;
-	box-shadow: 
-	0px 25.5px 19.1px -23px rgba(0, 0, 0, -0.004),
-	0px 38px 34.5px -23px rgba(0, 0, 0, 0.015),
-	0px 46.3px 47.7px -23px rgba(0, 0, 0, 0.043),
-	0px 54.6px 61.5px -23px rgba(0, 0, 0, 0.059),
-	0px 67.5px 82.8px -23px rgba(0, 0, 0, 0.067),
-	0px 108px 150px -23px rgba(0, 0, 0, 0.07)
-  ;
+	display: block;
+	text-align: center;
 }
 
 .NFTTitle{
 	margin-top: 2px;
-	margin-bottom: 1px;
+	margin-bottom: 5px;
 	margin-left: 5px;
-	color: rgb(78, 78, 78);
-	
+	color: #1C4670;
 }
 
 .NFTImage {
-	width: 90%;
-	height: auto;
-	margin-left: 5%;
-	margin-right: 5%;
-	margin-right: auto;
-	margin-bottom: 0px;
-	padding-bottom: 5px;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+.perperson{
+	font-size: 20px;
+	margin: 0;
+	color:#1C4670;
+	text-decoration: underline;
+}
+.NFTTokenId{
+	margin:1px;
+	color:#107868b9;
 }
 
 .NFTInfo{
-	margin-top: 2px;
-	margin-left: 5px;
-	margin-right: 5px;
+	width: 70%;
+	margin-top: 10px;
+	font-size: 15px;
+	color: #1C4670;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .BuyNFT{
-	float: right;
-	margin-right: 10px;
+	width: 200px;
+	margin-top: 25px;
+	margin-right: auto;
+	margin-left:auto;
+	padding-top: 20px;
+	padding-right: 50px;
+	padding-bottom: 20px;
+	padding-left: 50px;
 	text-align: center;
 	vertical-align: middle;
-	border-radius: 5px;
+	border-radius: 20px;
 	text-transform: uppercase;
 	font-weight: bold;
-	letter-spacing: .5px;
-	border: 3px solid #D4D4D4AF;
-	color: #414141;
-  background-color: rgba(168, 168, 168, 0.801);;
+	letter-spacing: 2px;
+	border: 3px solid #1a3042;
+	color: #040a0f;
+  	background-color: #1DC690;;
 	transition: all 0.2s linear;
 }
+.BuyNFT:hover{
+	border: 4px solid #264864;
+	background-color: #12805d;
+	color: #272727;
+	transition: all 0.3s linear;
+	cursor: pointer;
+}
 
+/* Join Section */
+.Join{
+	text-align: center;
+	color: ivory;
+	font-size: 70px;
+	height: fit-content;
+}
+.JoinTitle
+{
+	color: #278AB0;
+	margin: 0%;
+	margin-top: 5%;
+}
+.TheCrewTitle{
+	color:#278AB0;
+	margin:0;
+	margin-bottom: 3%;
+}
+.AboutRoadMap{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 25px;
+	width: 85%;
+	margin-right: auto;
+	margin-left: auto;
+}
 
+/*column section */
+.columns{
+	margin-top: 30px;
+	height: fit-content;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.column{
+	width: 60%;
+	background-color: ivory;
+	border-radius: 25px;
+}
 
 /* Hero Section */
 .Featured {

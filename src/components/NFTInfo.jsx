@@ -87,15 +87,16 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
 
     return (
         <div className="NFTInfoBox">
+          <img src={Image} className = "NFTImage" width="400" height="400" />
             <h2 className = "NFTTitle">{Name}</h2>
             {
-              CurrentTokenID <= max?<h2 className = "NFTTokenId">{CurrentTokenID}</h2>:<h2 className = "NFTTokenId">Sold Out</h2>
+              CurrentTokenID <= max?<h2 className = "NFTTokenId">Token: {CurrentTokenID} of {max}</h2>:<h2 className = "NFTTokenId">Sold Out</h2>
             }
-            <img src={Image} className = "NFTImage" width="300" height="300" ></img>
-            <div className = "BoxBottom">
-                <p className = "NFTInfo">{Description}</p>
-                <button onClick={() => CreateNFT(contractAddress, ['function createNFT(string memory tokenURI) public payable returns (uint256)'], URI)} className = "BuyNFT">Buy for {TokenCost}</button>
-            </div>
+            {
+              PerPerson != null?<h2 className='perperson'>{PerPerson} per wallet</h2>:null
+            }
+            <p className = "NFTInfo">{Description}</p>
+            <p className = "BuyNFT" onClick={() => CreateNFT(contractAddress, ['function createNFT(string memory tokenURI) public payable returns (uint256)'], URI)} className = "BuyNFT">Buy for {TokenCost}</p>
         </div>
     )
 }
