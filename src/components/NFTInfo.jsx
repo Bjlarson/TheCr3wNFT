@@ -9,6 +9,10 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
   const [ethBalance, setAddressEthBalance] = useState(() => GetEthBalance());
 
 	function GetTokenAmount() {
+    if(Address == null){
+      return;
+    }
+
     const abi = ['function GetMintFee() external view returns(uint)'];
 		const provider = new ethers.providers.InfuraProvider('ropsten', 'bb4510b38a1942eb9a67ef34c217d6a0');
 		const contract = new ethers.Contract(contractAddress,abi,provider);
@@ -20,6 +24,9 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
 	}
 
   function GetTokenId() {
+    if(Address == null){
+      return;
+    }
     const abi = ['function GetCurrentTokenId() external view returns(uint)']
     const provider = new ethers.providers.InfuraProvider('ropsten', 'bb4510b38a1942eb9a67ef34c217d6a0');
     const contract = new ethers.Contract(contractAddress,abi,provider);

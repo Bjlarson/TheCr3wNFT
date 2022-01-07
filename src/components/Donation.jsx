@@ -1,5 +1,6 @@
 import React from "react";
 import { ethers } from "ethers";
+import NFTSign from "./Pictures/NFTLandSign.jpg"
 
 function Donation() {
 

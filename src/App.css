@@ -16,11 +16,13 @@ header {
 	align-items: center;
 	padding: 30px 2%;
 }
+.logoimg{
+	margin-top: 10px;
+}
 .WalletConnectDiv {
 	display: inline-flex;
 	float: right;
 	margin-right: 2%;
-	margin-top: 15px;
 }
 .Walletbutton{
 	width: 200px;
@@ -58,6 +60,7 @@ nav ul {
 	padding: 0;
 }
 nav ul li {
+	padding-top: 15px;
 	display: inline-block;
 	color: #DFF0F3;
 	list-style: none;
@@ -250,7 +253,7 @@ ul li:hover a {
 /* Parallax Section */
 .banner {
 	background-color: #2D9AB7;
-	background-image: url("https://change-itn.eu/wp-content/uploads/2018/07/louvre_museum_paris_france-wallpaper-1920x1080.jpg");
+	background-image: url("https://pbs.twimg.com/profile_banners/1438539191466430468/1639495128/1500x500");
 	height: 400px;
 	background-attachment: fixed;
 	background-size: cover;
@@ -258,19 +261,20 @@ ul li:hover a {
 	margin-bottom: 30px;
 }
 .parallax {
-	color: #FFFFFF;
-	text-align: right;
-	padding-right: 100px;
+	color: #EAEAE0;
+	text-align: left;
+	padding-left: 10%;
 	padding-top: 110px;
 	letter-spacing: 2px;
 	margin-top: 0px;
+	font-size: 40px;
+	margin:0;
 }
 .parallax_description {
-	color: #FFFFFF;
-	text-align: right;
-	padding-right: 100px;
-	width: 30%;
-	float: right;
+	font-size: large;
+	color: #EAEAE0;
+	text-align: left;
+	padding-left: 10%;
 	font-weight: lighter;
 	line-height: 23px;
 	margin-top: 0px;
@@ -290,10 +294,11 @@ ul li:hover a {
 	vertical-align: middle;
 	background: rgba(156, 156, 156, 0.719);
 	border: medium;
-  margin-bottom: 5px;
-  margin-top: 45px;
-  margin-right: 15px;
-  text-decoration-color: #FFFFFF;
+	border-radius: 15px;
+  	margin-bottom: 5px;
+  	margin-top: 45px;
+  	margin-right: 15px;
+  	text-decoration-color: #FFFFFF;
 }
 ::placeholder {
   color: rgb(238, 238, 238);
@@ -310,6 +315,7 @@ ul li:hover a {
 }
 input, select, textarea{
     color: #f8f8f8;
+	padding-left: 10px;
 }
 
 textarea:focus, input:focus {
@@ -318,7 +324,7 @@ textarea:focus, input:focus {
 }
 .DonationButon{
 	float: left;
-	width: 100px;
+	width: fit-content;
 	margin-top: 40px;
 	margin-right: 2px;
 	margin-bottom: auto;
