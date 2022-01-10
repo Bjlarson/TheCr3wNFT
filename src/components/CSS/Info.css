@@ -1,0 +1,65 @@
+/*About Page*/
+.aboutSection{
+    text-align: center;
+}
+.NFTAbout{
+	width: 80%;
+	height: fit-content;
+    margin-right: auto;
+    margin-left:auto;
+	padding-top: 2%;
+	padding-bottom: 5%;
+    color:ivory;
+}
+.AboutHeader{
+    font-family: 'Forum', cursive;
+    color: #278AB0;
+    font-size: 75px;
+    letter-spacing: 15px;
+    margin-bottom: 5px;
+}
+
+.MuseumInfo{
+	height: fit-content;
+	padding-top: 3%;
+	padding-bottom: 8%;
+	background-color: ivory;
+	color:#1C4670;
+}
+
+.AHeader{
+	margin-top: 10%;
+	margin-left: auto;
+    margin-right: auto;
+	font-size: xx-Large;
+}
+
+.AboutSubHeader {
+    margin-top: 5px;
+	font-size: x-large;
+}
+
+.AboutParagraph{
+    width: 80%;
+    height: fit-content;
+	margin-top: 1%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 3%;
+	font-size: 18px;
+}
+
+@media (max-width: 500px) {
+	.AboutHeader{
+		font-size: 40px;
+		letter-spacing: 4px;
+	}
+
+	.AHeader{
+		font-size: medium;
+	}
+	
+	.AboutSubHeader {
+		font-size: medium;
+	}
+}

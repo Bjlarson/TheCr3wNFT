@@ -28,7 +28,7 @@ function Donation() {
   }
 
   return (
-  <section className="banner">
+  <section className="banner" >
     <h2 className="parallax">Make a Donation</h2>
     <p className="parallax_description">Help fund our project</p>
 	<div className="Donation">

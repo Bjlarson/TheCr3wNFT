@@ -1,0 +1,74 @@
+/* The Cr3w Section*/
+.TheCrew{
+	color: ivory;
+	text-align: center;
+	height: fit-content;
+}
+.meetTitle1{
+	font-family: 'Forum', cursive;
+	color: #278AB0;
+	margin: 0%;
+	margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+	letter-spacing: 30px;
+	font-size: 120px;
+}
+.meetTitle2{
+	font-family: 'Forum', cursive;
+	color:#278AB0;
+	margin:0;
+    margin-right: auto;
+    margin-left: auto;
+	margin-bottom: 3%;
+	letter-spacing: 15px;
+	font-size: 45px;
+}
+.Member{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.ProfilePic{
+    width: 30%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.memberName{
+	margin-top:3px;
+	margin-bottom: 0px;
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+h5{
+    margin: 0;
+}
+
+.memberPosition{
+    font-size: 20px;
+    margin-top: 8px;
+}
+.memberTwitter{
+    margin:2px;
+}
+.membertwitterbutton{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+	border-radius: 20px;
+	background-color: #1DC690;
+}
+
+@media (max-width: 450px) {
+	.meetTitle1{
+		letter-spacing: 20px;
+		font-size: 60px;
+	}
+	.meetTitle2{
+		letter-spacing: 5px;
+		font-size: 25px;
+	}
+}
+

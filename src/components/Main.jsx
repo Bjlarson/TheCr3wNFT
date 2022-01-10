@@ -25,37 +25,37 @@ function Main({address}) {
         <section className="columns">
             <div className="column">
                 <h4 className="columnHeader">ROADMAP</h4>
-                <h5 className="columnBody">420 CR3W Museum Early Access NFTs</h5>
-                <h5 className="columnBody">(400 GA & 20 VIP)</h5>
-                <h5 className="columnBody">Launch CR3W Museum</h5>
-                <h5 className="columnBody">3D Interactive, Customizable Galleries</h5>
-                <h5 className="columnBody">$1,000 Giveaways to Early Access Hodlers</h5>
-                <h5 className="columnBody">The CR3W Gift Shop</h5>
-                <h5 className="columnBody">Merch Giveaway to The CR3W Community</h5>
-                <h5 className="columnBody">Launch Crypto CR3W NFT Collection</h5>
-                <h5 className="columnBody">Crypto CR3W Giveaways through Twitter & Discord</h5>
+                <h5 className="RoadMapText">420 CR3W Museum Early Access NFTs</h5>
+                <h5 className="RoadMapText">(400 GA & 20 VIP)</h5>
+                <h5 className="RoadMapText">Launch CR3W Museum</h5>
+                <h5 className="RoadMapText">3D Interactive, Customizable Galleries</h5>
+                <h5 className="RoadMapText">$1,000 Giveaways to Early Access Hodlers</h5>
+                <h5 className="RoadMapText">The CR3W Gift Shop</h5>
+                <h5 className="RoadMapText">Merch Giveaway to The CR3W Community</h5>
+                <h5 className="RoadMapText">Launch Crypto CR3W NFT Collection</h5>
+                <h5 className="RoadMapText">Crypto CR3W Giveaways through Twitter & Discord</h5>
             </div>
             <div className="column">
                 <h4 className="columnHeader">UTILITIES</h4>
                 <h5 className="columnBody">Early Access Tickets</h5>
-                <p>Access to CR3W Museum weeks before Opening Day. VIP tickets gain exclusive access beyond that which General Admission recieves.</p>
+                <p className="columntext">Access to CR3W Museum weeks before Opening Day. VIP tickets gain exclusive access beyond that which General Admission recieves.</p>
                 <h5 className="columnBody">Why Hold Them?</h5>
-                <p>Holding the tickets also gives you eligibility for free airdrops/giveaways. We want to reward our OG community! #WAGMI</p>
+                <p className="columntext">Holding the tickets also gives you eligibility for free airdrops/giveaways. We want to reward our OG community! #WAGMI</p>
                 <h5 className="columnBody">Crypto CR3W NFTs</h5>
-                <p>The Crypto CR3W NFTs are 10,000 computer generated, crypto inspired collectibles with over 175 hand crafted features by Co-Founder, Carter Filion. Each collectible contains unique traits inspired by various cryptocurrencies & other members/projects within the NFT community.</p>
+                <p className="columntext">The Crypto CR3W NFTs are 10,000 computer generated, crypto inspired collectibles with over 175 hand crafted features by Co-Founder, Carter Filion. Each collectible contains unique traits inspired by various cryptocurrencies & other members/projects within the NFT community.</p>
                 <h5 className="columnBody">Collection Details</h5>
-                <p>The details regarding this collection are TBA. Updates & Announcments regarding the drop date, mint price, & all other details can be found on our Twitter & Discord.</p>
+                <p className="columntext">The details regarding this collection are TBA. Updates & Announcments regarding the drop date, mint price, & all other details can be found on our Twitter & Discord.</p>
             </div>
             <div className="column">
                 <h4 className="columnHeader">LONG TERM GOALS</h4>
                 <h5 className="columnBody">CR3W Auction House</h5>
-                <p>Auction House within CR3W Museum</p>
+                <p className="columntext">Auction House within CR3W Museum</p>
                 <h5 className="columnBody">NFT Marketplace</h5>
-                <p>We plan to have a fast an easy way for The CR3W Community to be able to buy & sell NFTs as easy as they can display them within the museum</p>
+                <p className="columntext">We plan to have a fast an easy way for The CR3W Community to be able to buy & sell NFTs as easy as they can display them within the museum</p>
                 <h5 className="columnBody">Upgraded Characters</h5>
-                <p>Enhanced Artwork</p>
+                <p className="columntext">Enhanced Artwork</p>
                 <h5 className="columnBody">Collaborations with NFT Projects</h5>
-                <p>Community led navigation with NFT projects from collectibles, photography, music & much more</p>
+                <p className="columntext">Community led navigation with NFT projects from collectibles, photography, music & much more</p>
             </div>
         </section>
         <TheCrew/>

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { Link, withRouter } from "react-router-dom";
 import logo from "./Pictures/TheCr3wNFTLogoWhite.svg"
+import "./CSS/Header.css"
 
 function Header(props) {
     const [errorMessage,setErrorMessage] = useState(null);
@@ -25,32 +26,10 @@ function Header(props) {
         <img className= "logoimg" alt="logo" src={logo} width="90" height="90"/>
     </Link>
     <nav>
-      <ul>
-        <li                
-        class={`nav-item  ${
-            props.location.pathname === "/" ? "active" : ""
-            }`}>
-                <Link to="/">HOME</Link>
-        </li>
-		<li                
-            class={`nav-item  ${
-                props.location.pathname === "/Museum" ? "active" : ""
-            }`}>
-            <Link to="/Museum" >MUSEUM</Link>
-        </li>
-        <li              
-            class={`nav-item  ${
-                props.location.pathname === "/Info" ? "active" : ""
-            }`}>
-                <Link to="/Info">INFO</Link>
-        </li>
-        <li                 
-            class={`nav-item  ${
-                props.location.pathname === "/Contact" ? "active" : ""
-            }`}>
-             <Link to="Contact">CONTACT</Link>
-        </li>
-      </ul>
+        <Link to="/" className="navitem">HOME</Link>
+        <Link to="/Museum" >MUSEUM</Link>
+        <Link to="/Info">INFO</Link>
+        <Link to="Contact">CONTACT</Link>
     </nav>
     <div className="WalletConnectDiv">
         <p onClick={() => ConnectToWalletHandler()} className="Walletbutton">{connButtonText}</p>

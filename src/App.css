@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Quicksand:wght@300&display=swap");
 
 /* Body */
 body {
-	font-family: Sans-serif;
+	font-family: 'Quicksand', sans-serif;
 	background-color: #001d24;
 	margin-top: 0px;
 	margin-right: 0px;
@@ -11,94 +11,13 @@ body {
 	font-style: normal;
 	font-weight: 200;
 }
-/* Navigation */
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 30px 2%;
-}
-.logoimg{
-	margin-top: 10px;
-}
-.WalletConnectDiv {
-	display: inline-flex;
-	float: right;
-	margin-right: 2%;
-}
-.Walletbutton{
-	width: 200px;
-	margin-top: 25px;
-	padding-top: 20px;
-	padding-right: 10px;
-	padding-bottom: 20px;
-	padding-left: 10px;
-	text-align: center;
-	vertical-align: middle;
-	border-radius: 20px;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 2px;
-	border: 3px solid #1a3042;
-	color: #040a0f;
-  background-color: #1DC690;;
-	transition: all 0.2s linear;
-}
-.Walletbutton:hover{
-	border: 4px solid #264864;
-	background-color: #12805d;
-	color: #272727;
-	transition: all 0.3s linear;
-	cursor: pointer;
-}
-.WalletAddress{
-	vertical-align: top;
-	color:#12805d;
-	font-size: small;
-	padding-bottom: 10px;
-}
-nav ul {
-	margin: 0;
-	padding: 0;
-}
-nav ul li {
-	padding-top: 15px;
-	display: inline-block;
-	color: #DFF0F3;
-	list-style: none;
-	font-size: 20px;
-	margin-right: 10px;
-	margin-left: 10px;
-	letter-spacing: 1px;
-	font-weight: bold;
 
-}
-ul li a {
-	color: #C4C4C4;
-	text-decoration: none;
-}
-ul li:hover a {
-	transition: all 0.5s linear;
-	color: #FFFFFF;
-	padding: 2px;
-	border-radius: 5px;
-	background-color: #107868b9;
-}
-.hero_header {
-	color: #888888;
-	text-align: center;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	letter-spacing: 2px;
-}
 /* Container */
 .container {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	height: 1000px;
+	height: fit-content;
 }
 .Featured{
 	background-color: ivory;
@@ -141,6 +60,7 @@ ul li:hover a {
 }
 
 .NFTTitle{
+	font-family: 'Forum', cursive;
 	margin-top: 2px;
 	margin-bottom: 5px;
 	margin-left: 5px;
@@ -234,19 +154,54 @@ ul li:hover a {
 
 /*column section */
 .columns{
+	font-family: 'Quicksand', sans-serif;
+	background-color: ivory;
 	margin-top: 30px;
 	display: flex;
 	justify-content: space-between;
 	grid-template-columns: 1fr 1fr 1fr;
-	margin: 20px;
-	color: #1a3042;
+	padding: 20px;
 }
 .column{
 	width: 60%;
 	margin: 3%;
-	background-color: #278AB0;
+	background-color: #1a3042 ;
 	border-radius: 25px;
 	text-align: center;
+}
+.columnHeader{
+	font-family: 'Forum', cursive;
+	color: #278AB0;
+	font-size: 30px;
+	font-weight: 700;
+	margin: 20px 0;
+	letter-spacing: 3px;
+}
+.RoadMapText{
+	font-size: 17px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: #1DC690;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+.columnBody{
+	font-size: 17px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: #1DC690;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+.columntext{
+	color: #1DC690;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 25px;
+	margin-top: 5px;
 }
 
 /* Hero Section */
@@ -269,7 +224,7 @@ ul li:hover a {
 /* Parallax Section */
 .banner {
 	background-color: #278AB0;
-	background-image: url("https://pbs.twimg.com/profile_banners/1438539191466430468/1639495128/1500x500");
+	background-image: url("https://thecr3wnft.com/BackgroundPictures/NFTLandSign.jpg");
 	height: 400px;
 	background-attachment: fixed;
 	background-size: cover;
@@ -357,7 +312,7 @@ textarea:focus, input:focus {
 	letter-spacing: 2px;
 	border: 3px solid #1193c783;
 	color: ivory;
-  background-color: #2789b083;;
+  	background-color: #2789b083;;
 	transition: all 0.2s linear;
 }
 .DonationButon:hover {
@@ -406,9 +361,6 @@ footer .footer_column p {
 	margin-right: auto;
 	margin-bottom: 15px;
 }
-.footerButton{
-	background-color: #1DC690;
-}
 .button {
 	float: left;
 	width: 60px;
@@ -448,9 +400,6 @@ footer .footer_column p {
 	padding-top: 60px;
 	padding-bottom: 60PX;
 	margin-bottom: 0px;
-}
-footer {
-	display: inline-block;
 }
 .hidden {
 	display: none;
@@ -535,159 +484,23 @@ textarea:focus, input:focus {
 	color: #636363;
   background-color: rgba(192, 192, 192, 0.801);;
 	transition: all 0.2s linear;
-	}
-/* Contact */
-
-@keyframes wipe-enter {
-	0% {
-		transform: scale(1, .025);
-	}
-	/*50% {
-		transform: scale(1, .025);
-	}*/
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.logo-animation {
-		animation-name: wipe-enter;
-		animation-duration: 1.7s;
-		animation-iteration-count: 1;
-	}
-}
-
-.Instagram{
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	height: 900px;
-	width: 100%;
-	background-color: #c2c2c2;
-	background-size: cover;
-	background-repeat: no-repeat;
-	font-family: Freight Sans;
-}
-
-.Instalogo{
-	margin-right: 5%;
-	margin-left: 5%;
-	float:right;
-}
-
-.ititle{
-	margin-left: 5%;
-	font-size: xxx-large;
-}
-
-.iAbout{
-	margin-left: 5%;
-	font-size:x-large
-}
-
-.Twitter{
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	height: 900px;
-	width: 100%;
-	background-color: #d4e3e9;
-	background-size: cover;
-	background-repeat: no-repeat;
-	font-family: Freight Sans;
-}
-
-.Twitterlogo{
-	margin-right: 5%;
-	margin-left: 5%;
-	float:left;
-}
-
-.tHeader{
-	margin-right: 5%;
-	font-size: xxx-large;
-}
-
-.tAbout{
-	margin-right: 5%;
-	font-size:x-large
-}
-
-.Spotify{
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	height: 900px;
-	width: 100%;
-	background-color: #303030;
-	background-size: cover;
-	background-repeat: no-repeat;
-	font-family: Freight Sans;
-}
-
-.Spotifylogo{
-	margin-right: 5%;
-	margin-left: 5%;
-	float:right;
-}
-
-.sHeader{
-	margin-left: 5%;
-	font-size: xxx-large;
-	color: #cfd6d2;
-}
-
-.sAbout{
-	margin-left: 5%;
-	font-size:x-large;
-	color: #cfd6d2;
-}
-
-.Email{
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	height: 900px;
-	width: 100%;
-	background-color: #cccccc;
-	background-size: cover;
-	background-repeat: no-repeat;
-	font-family: Freight Sans;
-}
-
-.Emaillogo{
-	margin-left: 5%;
-	margin-right: 5%;
-	float:left;
-}
-
-.eHeader{
-	margin-right: 5%;
-	font-size: xxx-large;
-}
-
-.eAbout{
-	margin-right: 5%;
-	font-size:x-large
-}
-
-.emailAddress{
-	margin-right: 5%;
-	font-size:x-large
 }
 
 /* Museum */
 .Museum{
-	height: 750px;
+	height: fit-content;
 	text-align: center;
 }
 
 .viewPort{
+	display: flex;
 	border-radius: 25px;
-	width: 900px;
-	height: 500px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 15%;
+	margin-right: 15%;
 	margin-top: 5%;
 	margin-bottom: 5%;
+	padding-top: 15%;
+	padding-bottom: 15%;
 	background-color: rgb(255, 255, 255);
 	text-align: center;
 	box-shadow:
@@ -700,104 +513,32 @@ textarea:focus, input:focus {
 }
 
 .view{
-	padding-top: 10%;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top: 15px;
 	color:darkgray;
 	font-size: xx-large;
 }
 
 .MuseumHeader{
-	color: #414141;
-	font-size: xx-large;
+	font-family: 'Forum', cursive;
+	color: #278AB0;
+	font-size: 35px;
+	letter-spacing: 5px;
 }
 
 .MuseumAbout{
-	color: #636363;
-	font-size: large;
+	color: ivory;
+	font-size: 25px;
+	letter-spacing: 3px;
+	padding-bottom: 20px;
+	margin-bottom: 40px;
 }
 
-/*About Page*/
-.Creators{
-	display: inline-flex;
-	justify-content: center;
-	text-align: center;
-	margin-top: 2%;
-	margin-bottom: 5%;
-}
 
-.card{
-	margin-right: 10%;
-	width: 35%;
-	background-color: #DFDFDF;
-	box-shadow:
-	1.3px 2.4px 8.8px rgba(0, 0, 0, 0.063),
-	3px 5.5px 16.7px rgba(0, 0, 0, 0.072),
-	5.5px 10.1px 25.3px rgba(0, 0, 0, 0.073),
-	9.4px 17px 36.6px rgba(0, 0, 0, 0.074),
-	16px 29.1px 54.1px rgba(0, 0, 0, 0.076),
-	33px 60px 98px rgba(0, 0, 0, 0.09);
-}
-
-.NFTAbout{
-	width: auto;
-	height: fit-content;
-	padding-top: 3%;
-	padding-bottom: 5%;
-}
-
-.MuseumInfo{
-	width: auto;
-	height: fit-content;
-	padding-top: 3%;
-	padding-bottom: 8%;
-	background-color: rgb(46, 46, 46);
-	color:#b9b9b9;
-}
-
-.AHeader{
-	margin-top: 10%;
-	margin-left: 5%;
-	font-size: xx-Large;
-}
-
-.AboutSubHeader {
-	font-size: x-large;
-}
-
-.AboutParagraph{
-	margin-top: 1%;
-	margin-right: 15%;
-	margin-left: 10%;
-	margin-bottom: 2%;
-	font-size: 18px;
-}
 
 /* Mobile */
 @media (max-width: 320px) {
-.logo {
-	width: 100%;
-	text-align: center;
-	margin-top: 13px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-}
-.container header nav {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	width: 100%;
-	float: none;
-	display: none;
-}
-nav ul li {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	width: 100%;
-	text-align: center;
-}
 .text_column {
 	width: 100%;
 	text-align: justify;
@@ -839,10 +580,6 @@ nav ul li {
 	float: none;
 	text-align: center;
 }
-.banner {
-	background-color: #2D9AB7;
-	background-image: none;
-}
 .tagline {
 	margin-top: 20px;
 	line-height: 22px;
@@ -853,45 +590,98 @@ nav ul li {
 	line-height: 22px;
 	text-align: center;
 }
+.Title1{
+	font-size: 40px;
+	letter-spacing: 15PX;
+}
+.Title2{
+	font-size: medium;
+	letter-spacing: 5px;
+}
+.JoinTitle
+{
+	letter-spacing: 15px;
+	font-size: 50px;
+}
+.TheCrewTitle{
+	letter-spacing: 15px;
+	font-size: 20px;
+}
+.AboutRoadMap{
+	font-size: 20px;
+}
+.columns{
+	font-family: 'Quicksand', sans-serif;
+	background-color: ivory;
+	margin-top: 30px;
+	display: block;
+	justify-content: none;
+	grid-template-columns: none;
+	padding: 20px;
+}
+.column{
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 15px;
+	text-align: center;
+}
+.columnHeader{
+	padding-top: 10px;
+}
+.RoadMapText{
+	font-size: 17px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: #1DC690;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+.columntext{
+	padding-bottom: 5px;
+}
+.NFTImage {
+	width: 80%;
+	height: auto;
+}
+
+.BuyNFT{
+	width: 75%;
+	margin-right: auto;
+	margin-left:auto;
+	padding-top: 3%;
+	padding-right: 5%;
+	padding-bottom: 3%;
+	padding-left: 5%;
+}
+.DonationAmount{
+	width: 150px;
+}
+input, select, textarea{
+	margin-left: 1%;
+	padding-left: 2%;
+}
+.DonationButon{
+	font-size: small;
+	padding-right: 1%;
+	padding-left: 1%;
+	margin-right: 1%;
+}
 }
 
 /* Small Tablets */
-@media (min-width: 321px)and (max-width: 767px) {
-.logo {
-	width: 100%;
-	text-align: center;
-	margin-top: 13px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	color: #043745;
-}
-.container header nav {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	width: 100%;
-	float: none;
-	overflow: auto;
-	display: inline-block;
-	background: #52bad5;
-}
-header nav ul {
-	padding: 0px;
-	float: none;
-}
-nav ul li {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	width: 100%;
-	text-align: center;
-	padding-top: 8px;
-	padding-bottom: 8px;
-}
-.text_column {
+@media (min-width:500px) and (max-width: 767px) {
+	.Title1{
+		font-size: 80px;
+		letter-spacing: 15PX;
+	}
+	.Title2{
+		margin:0;
+		font-size: large;
+	}
+	.text_column {
 	width: 100%;
 	text-align: left;
 	padding-top: 0px;
@@ -963,7 +753,7 @@ nav ul li {
 }
 
 /* Small Desktops */
-@media (min-width: 768px) and (max-width: 1096px) {
+@media (min-width: 767px) and (max-width: 1096px) {
 .text_column {
 	width: 100%;
 }
@@ -984,5 +774,99 @@ nav ul li {
 .banner {
 	margin-top: 0px;
 	padding-top: 0px;
+}
+}
+
+@media (min-width:320px) and (max-width: 500px) {
+	.Title1{
+		font-size: 50px;
+		letter-spacing: 15PX;
+	}
+	.Title2{
+		font-size: medium;
+		letter-spacing: 5px;
+	}
+
+	.columns{
+		font-family: 'Quicksand', sans-serif;
+		background-color: ivory;
+		margin-top: 30px;
+		display: block;
+		justify-content: none;
+		grid-template-columns: none;
+		padding: 20px;
+	}
+	.column{
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+		border-radius: 15px;
+		text-align: center;
+	}
+	.columnHeader{
+		padding-top: 10px;
+	}
+	.RoadMapText{
+		font-size: 17px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		color: #1DC690;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-bottom:10px;
+		margin-top:10px;
+	}
+	.columntext{
+		padding-bottom: 5px;
+	}
+
+	.JoinTitle
+{
+	letter-spacing: 15px;
+	font-size: 80px;
+}
+.TheCrewTitle{
+	letter-spacing: 15px;
+	font-size: 30px;
+}
+.AboutRoadMap{
+	font-size: 20px;
+}
+.NFTInfoBox{
+	display: block;
+	text-align: center;
+}
+
+.NFTTitle{
+	font-family: 'Forum', cursive;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	color: #1C4670;
+}
+
+.NFTImage {
+	width: 80%;
+	height: auto;
+}
+
+.BuyNFT{
+	width: 75%;
+	margin-right: auto;
+	margin-left:auto;
+	padding-top: 3%;
+	padding-right: 5%;
+	padding-bottom: 3%;
+	padding-left: 5%;
+}
+.DonationAmount{
+	width: 200px;
+}
+input, select, textarea{
+	padding-left: 2%;
+}
+.DonationButon{
+	padding-right: 2%;
+	padding-left: 2%;
 }
 }

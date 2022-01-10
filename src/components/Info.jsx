@@ -1,14 +1,14 @@
 import React from "react";
 import Donation from "./Donation";
 import TheCrew from "./TheCrew";
-import pic from "./Pictures/default-user-icon-8-300x300.jpg";
+import "./CSS/Info.css"
 
 function Info() {
   return (
 	<div className="aboutSection">
     <div className="NFTAbout">
       <div className="AHeader">
-        <h2 className="AboutHeader">What is an NFT</h2>
+        <h2 className="AboutHeader">WHAT IS AN NFT</h2>
         <h4 className="AboutSubHeader">Wikipidia descripes and NFT Like this.</h4>
       </div>
       <p className ="AboutParagraph"> 
@@ -20,7 +20,7 @@ function Info() {
     </div>
     <div className="MuseumInfo">
       <div className="AHeader">
-        <h2 className="AboutHeader">The Museum</h2>
+        <h2 className="AboutHeader">THE MUSEUM</h2>
         <h4 className="AboutSubHeader">Display and Share Your NFT Artwork</h4>
       </div>
       <p className ="AboutParagraph"> 
