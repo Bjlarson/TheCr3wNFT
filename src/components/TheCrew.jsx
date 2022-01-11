@@ -1,5 +1,6 @@
 import React from "react";
 import carter from "./Pictures/Carter.jpg";
+import blake from "./Pictures/spacesuit.svg";
 import twitter from "./Pictures/twitter.png";
 import "./CSS/TheCrew.css";
 
@@ -23,7 +24,7 @@ function TheCrew() {
 			</p>
 		</div>
 		<div className="Member">
-			<img className = "ProfilePic" src = {carter} width="400" height="400"/>
+			<img className = "ProfilePic" src = {blake} width="400" height="400"/>
 			<h4 className="memberName">Blake Larson</h4>
 			<h5 className="ailias">(aka ABigBlindGuy2)</h5>
 			<h4 className="memberPosition">Co-Founder, Developer</h4>

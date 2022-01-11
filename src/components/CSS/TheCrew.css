@@ -29,6 +29,7 @@
 	padding-bottom: 15px;
 }
 .ProfilePic{
+	border-radius: 15px;
     width: 30%;
     height: auto;
     margin-left: auto;
