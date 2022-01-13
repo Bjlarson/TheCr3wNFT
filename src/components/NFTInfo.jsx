@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import { ethers } from 'ethers';
 
-export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image ,Description, max, PerPerson}) {
-	const [TokenCost, setTokenCost] = useState(() => GetTokenAmount());
+export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image ,Description,price ,max, PerPerson}) {
+	const [TokenCost, setTokenCost] = useState(price);
   const [CurrentTokenID, setTokenID] = useState(() => GetTokenId());
   const [addressBalance, setAddressBalance] = useState(() => getBalance());
   const [ethBalance, setAddressEthBalance] = useState(() => GetEthBalance());
 
-	function GetTokenAmount() {
+/* 	function GetTokenAmount() {
     if(!window.ethereum){
       return;
     }
@@ -21,7 +21,7 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
     .then(result => {
       setTokenCost(ethers.utils.formatEther(result.toString()));
     })
-	}
+	} */
 
   function GetTokenId() {
     if(!window.ethereum){
@@ -103,7 +103,7 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
               PerPerson != null?<h2 className='perperson'>{PerPerson} per wallet</h2>:null
             }
             <p className = "NFTInfo">{Description}</p>
-            <p className = "BuyNFT" onClick={() => CreateNFT(contractAddress, ['function createNFT(string memory tokenURI) public payable returns (uint256)'], URI)} className = "BuyNFT">Buy for {TokenCost}</p>
+            <p className = "BuyNFT" onClick={() => CreateNFT(contractAddress, ['function createNFT(string memory tokenURI) public payable returns (uint256)'], URI)} className = "BuyNFT">Buy for {price}</p>
         </div>
     )
 }
