@@ -27,10 +27,10 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
     if(!window.ethereum){
       return;
     }
-    const abi = ['function GetCurrentTokenId() external view returns(uint)']
-    const provider = new ethers.providers.InfuraProvider('ropsten', 'bb4510b38a1942eb9a67ef34c217d6a0');
+    const abi = ['function GetTokenId() external view returns(uint)']
+    const provider = new ethers.providers.InfuraProvider('ropsten', 'b8e0e1677af045a6a3ae52c78b8e7331');
     const contract = new ethers.Contract(contractAddress,abi,provider);
-    contract.GetCurrentTokenId()
+    contract.GetTokenId()
     .then(result => {
       console.log(result.toString());
       setTokenID(result.toString());
@@ -84,7 +84,7 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
       const signer = metamaskProvider.getSigner();
       const contract = new ethers.Contract(contractAddress,ABI,signer);
       let val = ethers.utils.parseEther(TokenCost.toString());
-      let transaction = await contract.createNFT(uri, { value: val.toString() });
+      let transaction = await contract.create(uri, { value: val.toString() });
       alert("Transaction Sent");
       await transaction.wait();
     } catch (err) {
@@ -103,7 +103,7 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
               PerPerson != null?<h2 className='perperson'>{PerPerson} per wallet</h2>:null
             }
             <p className = "NFTInfo">{Description}</p>
-            <p className = "BuyNFT" onClick={() => CreateNFT(contractAddress, ['function createNFT(string memory tokenURI) public payable returns (uint256)'], URI)} className = "BuyNFT">Buy for {price}</p>
+            <p className = "BuyNFT" onClick={() => CreateNFT(contractAddress, ['function create(string memory tokenURI) public payable'], URI)}>Buy for {price}</p>
         </div>
     )
 }
