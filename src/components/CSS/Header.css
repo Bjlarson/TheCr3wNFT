@@ -104,8 +104,8 @@ nav a:hover {
     .Walletbutton{
         width: 55px;
         border-radius: 10px;
-        letter-spacing: 1px;
-        font-size: 10px;
+        letter-spacing: 0px;
+        font-size: 9px;
     }
     nav a {
 		padding-right: 2%;

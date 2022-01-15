@@ -8,27 +8,12 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
   const [addressBalance, setAddressBalance] = useState(() => getBalance());
   const [ethBalance, setAddressEthBalance] = useState(() => GetEthBalance());
 
-/* 	function GetTokenAmount() {
-    if(!window.ethereum){
-      return;
-    }
-
-    const abi = ['function GetMintFee() external view returns(uint)'];
-		const provider = new ethers.providers.InfuraProvider('ropsten', 'bb4510b38a1942eb9a67ef34c217d6a0');
-		const contract = new ethers.Contract(contractAddress,abi,provider);
-    
-		contract.GetMintFee()
-    .then(result => {
-      setTokenCost(ethers.utils.formatEther(result.toString()));
-    })
-	} */
-
   function GetTokenId() {
     if(!window.ethereum){
       return;
     }
     const abi = ['function GetTokenId() external view returns(uint)']
-    const provider = new ethers.providers.InfuraProvider('ropsten', 'b8e0e1677af045a6a3ae52c78b8e7331');
+    const provider = new ethers.providers.InfuraProvider('mainnet', 'b8e0e1677af045a6a3ae52c78b8e7331');
     const contract = new ethers.Contract(contractAddress,abi,provider);
     contract.GetTokenId()
     .then(result => {
@@ -44,6 +29,7 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
 
     const abi = ['function balanceOf(address owner) public view returns (uint256)'];
     const metamaskProvider = new ethers.providers.Web3Provider(window.ethereum);
+    console.log("network" + metamaskProvider._network);
     const contract = new ethers.Contract(contractAddress,abi,metamaskProvider);
     contract.balanceOf(Address)
     .then(result => {
@@ -59,7 +45,7 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     provider.getBalance(Address)
     .then(balance => {
-      setAddressEthBalance(ethers.utils.formatEther(balance.toString()))
+      setAddressEthBalance(ethers.utils.formatEther(balance))
     })
   }
   
@@ -73,7 +59,7 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
       alert("You already have the allowed amount");
       return;
     }
-
+    console.log({ethBalance});
     if(ethBalance <= TokenCost){
       alert("You do not have the required funds");
       return;
@@ -103,7 +89,7 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
               PerPerson != null?<h2 className='perperson'>{PerPerson} per wallet</h2>:null
             }
             <p className = "NFTInfo">{Description}</p>
-            <p className = "BuyNFT" onClick={() => CreateNFT(contractAddress, ['function create(string memory tokenURI) public payable'], URI)}>Buy for {price}</p>
+            <p className = "BuyNFT" onClick={() => CreateNFT(contractAddress, ['function create(string memory tokenURI) public payable'], URI)}>{TokenCost} Eth</p>
         </div>
     )
 }

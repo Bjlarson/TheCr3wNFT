@@ -12,7 +12,7 @@ function Footer() {
   return (
     <section className="footer_banner" id="contact">
 	<div className="Subs">
-    	<p className="button" href="https://www.instagram.com/cr3w_collections/" alt="Insta" onClick = {() => GoToSite("https://www.instagram.com/cr3w_collections/")}>
+    	<p className="button" href="https://www.instagram.com/cr3w_collections/" alt="Insta" onClick = {() => GoToSite("https://www.instagram.com/thecr3wnft/")}>
 			<img classname = "footerButton" src = {insta} width="40" height="40"/>
 		</p>
 		<p className="button" href="https://twitter.com/TheCr3wNFT" alt="Twitter" onClick = {() => GoToSite("https://twitter.com/TheCr3wNFT")}>
