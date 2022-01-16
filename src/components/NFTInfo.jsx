@@ -83,7 +83,7 @@ export default function NFTInfoBox ({Address, Name, contractAddress, URI, Image 
           <img src={Image} className = "NFTImage" width="400" height="400" />
             <h2 className = "NFTTitle">{Name}</h2>
             {
-              CurrentTokenID <= max?<h2 className = "NFTTokenId">Token: {CurrentTokenID} of {max}</h2>:<h2 className = "NFTTokenId">Sold Out</h2>
+              CurrentTokenID != null?<h2 className = "NFTTokenId">Token: {CurrentTokenID} of {max}</h2>:CurrentTokenID <= max?<h2 className = "NFTTokenId">Sold Out</h2>:null
             }
             {
               PerPerson != null?<h2 className='perperson'>{PerPerson} per wallet</h2>:null
