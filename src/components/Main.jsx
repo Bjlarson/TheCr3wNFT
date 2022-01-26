@@ -25,7 +25,7 @@ function Main({address}) {
             <div className="column">
                 <h4 className="columnHeader">ROADMAP</h4>
                 <h5 className="RoadMapText">420 CR3W Museum Early Access NFTs</h5>
-                <h5 className="RoadMapText">(400 GA & 20 VIP)</h5>
+                <h5 className="RoadMapText">(420 GA & 69 VIP)</h5>
                 <h5 className="RoadMapText">Launch CR3W Museum</h5>
                 <h5 className="RoadMapText">3D Interactive, Customizable Galleries</h5>
                 <h5 className="RoadMapText">$1,000 Giveaways to Early Access Hodlers</h5>
