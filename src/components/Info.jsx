@@ -8,23 +8,22 @@ function Info() {
 	<div className="aboutSection">
     <div className="NFTAbout">
       <div className="AHeader">
-        <h2 className="AboutHeader">WHAT IS AN NFT</h2>
-        <h4 className="AboutSubHeader">Wikipidia descripes and NFT Like this.</h4>
+        <h2 className="AboutHeader">WHAT IS AN NFT?</h2>
+        <h4 className="AboutSubHeader">Podcast & Youtube</h4>
       </div>
       <p className ="AboutParagraph"> 
-      An NFT is a unit of data stored on a digital ledger, called a blockchain, which can be sold and traded. The NFT can be associated with a particular digital or physical asset (such as a file or a physical object) and a license to use the asset for a specified purpose. NFTs (and the associated license to use, copy or display the underlying asset) can be traded and sold on digital markets.
-      </p>
-      <p className ="AboutParagraph"> 
-      NFTs function like cryptographic tokens, but, unlike cryptocurrencies like Bitcoin, NFTs are not mutually interchangeable, hence not fungible. While all bitcoins are equal, each NFT may represent a different underlying asset and thus have a different value. NFTs are created when blockchains string records of cryptographic hash, a set of characters identifying a set of data, onto previous records therefore creating a chain of identifiable data blocks. This cryptographic transaction process ensures the authentication of each digital file by providing a digital signature that is used to track NFT ownership. However, data links that point to details like where the art is stored can die.
+      https://open.spotify.com/episode/56quWx2MDZroSSHw2lTe6F?si=fO_eHTrcQ9KY66TwUXndxw
+      https://anchor.fm/thecr3w/episodes/7-What-is-an-NFT---NFTs-Explained-in-LESS-than-20-min-e1dpsme
+      https://youtu.be/Oz9zw7-_vhM
       </p>
     </div>
     <div className="MuseumInfo">
       <div className="AHeader">
-        <h2 className="AboutHeader">THE MUSEUM</h2>
-        <h4 className="AboutSubHeader">Display and Share Your NFT Artwork</h4>
+        <h2 className="AboutHeader">THE CR3W MUSEUM</h2>
+        <h4 className="AboutSubHeader">3D Interactive / Customizable NFT Museum</h4>
       </div>
       <p className ="AboutParagraph"> 
-        The Goal of this project is to have a place where you can put your NFT Artwork on Display. We would like to have this place that allows you to See your artwork in a virtual space, walk around and see if yourself or share your address and allow others to visit your collection. This is our vision for what we have in the phisical world artwork and bring it to the digital world of Artwork. 
+      The CR3W Museum is designed to be a place where you can put your NFT collection on display for others in the community to admire. That is why we built the CR3W Museum which allows you to see your collection in a 3D virtual space. We also want it to be a place where the NFT community can hangout & interact with one another. Our vision is to take what we have in the physical art world & bring it into the digital art world because we believe artists, collectors & creators deserve to display their NFT collections the same way that we can go to Museums in real life to see other art collections.
       </p>
     </div>
     <TheCrew />
