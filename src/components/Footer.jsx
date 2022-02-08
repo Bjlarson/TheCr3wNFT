@@ -18,7 +18,7 @@ function Footer() {
 		<p className="button" href="https://twitter.com/TheCr3wNFT" alt="Twitter" onClick = {() => GoToSite("https://twitter.com/TheCr3wNFT")}>
 			<img classname = "footerButton" src = {twitter} width="40" height="40"/>
 		</p>
-	    <p className="button" href="https://anchor.fm/crypto.cr3w" alt="Spotify" onClick = {() => GoToSite("https://anchor.fm/crypto.cr3w")}>
+	    <p className="button" href="https://anchor.fm/crypto.cr3w" alt="Spotify" onClick = {() => GoToSite("https://anchor.fm/thecr3w")}>
 			<img classname = "footerButton" src = {spotify} width="40" height="40"/>
 		</p>
 		<p className="button" href="https://discord.com/invite/arUyK56ghE" alt="Spotify" onClick = {() => GoToSite("https://discord.com/invite/arUyK56ghE")}>
