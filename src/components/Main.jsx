@@ -22,16 +22,16 @@ function Main({address}) {
         </section>
         <section className="columns">
             <div className="column">
-                <h4 className="columnHeader">FAQs</h4>
+                <h4 className="columnHeader">Gallery FAQs</h4>
                 <h5 className="RoadMapText">How Do I Get My Own NFT Gallery?</h5>
-                <h5 className="RoadMapText">You can receive your own gallery by minting one of our NFTickets on our website. Right now we are minting 420 General Admission Tickets & will be releasing 69 VIP tickets closer to launch.</h5>
+                <p className="columntext">You can receive your own gallery by minting one of our NFTickets on our website. Right now we are minting 420 General Admission Tickets & will be releasing 69 VIP tickets closer to launch.</p>
                 <h5 className="RoadMapText">When Will CR3W Museum Launch?</h5>
-                <h5 className="RoadMapText">Our goal is Spring 2022 but we will have a set date that will be announced on Twitter.</h5>
+                <p className="columntext">Our goal is Spring 2022 but we will have a set date that will be announced on Twitter.</p>
                 <h5 className="RoadMapText">Can You Get In The Museum Without A NFTicket?</h5>
-                <h5 className="RoadMapText">Yes, you can come in & view the NFT galleries for free.</h5>
+                <p className="columntext">Yes, you can come in & view the NFT galleries for free.</p>
             </div>
             <div className="column">
-                <h4 className="columnHeader">FAQs</h4>
+                <h4 className="columnHeader">Ticket FAQs</h4>
                 <h5 className="columnBody">What Are NFTickets?</h5>
                 <p className="columntext">NFTickets are the NFT tickets we are currently minting which give access to your very own NFT gallery within CR3W Museum. Early Access tickets also will have access our beta version before we open the Museum to the public.</p>
                 <h5 className="columnBody">Why Hold Them?</h5>

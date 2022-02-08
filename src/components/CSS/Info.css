@@ -38,7 +38,12 @@
     margin-top: 5px;
 	font-size: x-large;
 }
-
+.URLLink{
+	cursor: pointer;
+}
+.URLLink:hover{
+	color:#278AB0;
+}
 .AboutParagraph{
     width: 80%;
     height: fit-content;
